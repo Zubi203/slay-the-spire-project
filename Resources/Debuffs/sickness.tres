@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://c4d4tfgsvcg2u"]
+
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="1_67q1j"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_e5xd2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5xd2"]
+atlas = ExtResource("1_e5xd2")
+region = Rect2(320, 1217, 32, 33)
+
+[resource]
+script = ExtResource("1_67q1j")
+intensity = -3
+stat_to_modify = 1
+buff_type = 1
+name = "Sickness"
+icon = SubResource("AtlasTexture_e5xd2")
+stackable = true
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

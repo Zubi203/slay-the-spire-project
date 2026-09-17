@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://cmqp2ogu1rmwp"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_3vmci"]
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="1_g1kqc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_630l8"]
+atlas = ExtResource("1_3vmci")
+region = Rect2(353, 1729, 32, 32)
+
+[resource]
+script = ExtResource("1_g1kqc")
+intensity = -5
+buff_type = 1
+name = "Vulnerable"
+icon = SubResource("AtlasTexture_630l8")
+stackable = true
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

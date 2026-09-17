@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://bd2akex77kcxe"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_fvkxk"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_26fcm"]
+[ext_resource type="Resource" uid="uid://dj2i8ed3a8o42" path="res://Resources/Buffs/vital_spirit.tres" id="2_t7dw8"]
+[ext_resource type="Resource" uid="uid://d3xkdev3xb85j" path="res://Resources/Buffs/supercharged.tres" id="3_wi58r"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_kdblj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf3h1"]
+atlas = ExtResource("4_kdblj")
+region = Rect2(160, 2208, 32, 32)
+
+[resource]
+script = ExtResource("2_26fcm")
+buffs_to_apply = Array[ExtResource("1_fvkxk")]([ExtResource("2_t7dw8"), ExtResource("3_wi58r")])
+name = "The Forest's Blessing"
+type = 1
+icon = SubResource("AtlasTexture_bf3h1")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DrawPileEmptyAttackCardData" format=3 uid="uid://cva0p13vgmvar"]
+
+[ext_resource type="Script" uid="uid://pl2daxo5lkvm" path="res://Scripts/draw_pile_empty_attack_card_data.gd" id="1_4kd6c"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_kwaqm"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_7wilf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwaqm"]
+atlas = ExtResource("1_kwaqm")
+region = Rect2(128, 2464, 30, 30)
+
+[resource]
+script = ExtResource("1_4kd6c")
+damage = 70
+name = "Extinction Event"
+cost = 0
+icon = SubResource("AtlasTexture_kwaqm")
+special_description = "Can only be used if the Draw Pile is empty."
+metadata/_custom_type_script = "uid://pl2daxo5lkvm"

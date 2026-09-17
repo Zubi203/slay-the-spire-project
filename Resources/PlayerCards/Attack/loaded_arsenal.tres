@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="TriggerWhenAllCardsInHandAreAttacks" format=3 uid="uid://kmjooofwp478"]
+
+[ext_resource type="Script" uid="uid://c0vlsgdjjvl8b" path="res://Scripts/trigger_when_all_cards_in_hand_are_attacks.gd" id="1_d8iyg"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_k837q"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_je5c0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k837q"]
+atlas = ExtResource("1_k837q")
+region = Rect2(352, 2656, 32, 32)
+
+[resource]
+script = ExtResource("1_d8iyg")
+damage = 19
+name = "Loaded Arsenal"
+cost = 0
+icon = SubResource("AtlasTexture_k837q")
+special_description = "Can only be used if all other cards in your hand are Attacks."
+metadata/_custom_type_script = "uid://c0vlsgdjjvl8b"

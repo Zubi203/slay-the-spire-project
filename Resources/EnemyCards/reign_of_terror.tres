@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://cwytduxd46kkj"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_csplh"]
+[ext_resource type="Resource" uid="uid://c7apv7gji7ed6" path="res://Resources/Debuffs/spirit_break.tres" id="2_nxrdi"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_y4t3h"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="3_5afh2"]
+[ext_resource type="Resource" uid="uid://b44vilkvhpjdg" path="res://Resources/Debuffs/weakness.tres" id="5_wgkha"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="6_1b3l4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmep0"]
+atlas = ExtResource("6_1b3l4")
+region = Rect2(384, 2432, 32, 32)
+
+[resource]
+script = ExtResource("2_y4t3h")
+debuffs_to_apply = Array[ExtResource("1_csplh")]([ExtResource("2_nxrdi"), ExtResource("3_5afh2"), ExtResource("5_wgkha")])
+name = "Reign of Terror"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_rmep0")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://pu2yllq57cfp"]
+
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_50bel"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_ri7qa"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_t6263"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri7qa"]
+atlas = ExtResource("1_ri7qa")
+region = Rect2(128, 2464, 32, 32)
+
+[resource]
+script = ExtResource("1_50bel")
+damage = 999
+name = "A Fucking Nuke"
+cost = 0
+icon = SubResource("AtlasTexture_ri7qa")
+special_description = "<DEBUG_CARD>"
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

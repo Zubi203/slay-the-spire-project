@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://c7apv7gji7ed6"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_cqtcy"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_t1o10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1o10"]
+atlas = ExtResource("1_t1o10")
+region = Rect2(288, 2368, 32, 32)
+
+[resource]
+script = ExtResource("1_cqtcy")
+multiplier = 0.6
+buff_type = 1
+name = "Spirit Break"
+icon = SubResource("AtlasTexture_t1o10")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

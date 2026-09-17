@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://irt2d677atgg"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_ba1br"]
+[ext_resource type="Resource" uid="uid://bljqtemp4rt02" path="res://Resources/Debuffs/maimed.tres" id="2_b56sk"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_udti7"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_whxrm"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="5_whxrm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b56sk"]
+atlas = ExtResource("3_whxrm")
+region = Rect2(257, 2368, 32, 32)
+
+[resource]
+script = ExtResource("2_udti7")
+debuffs_to_apply = Array[ExtResource("1_ba1br")]([ExtResource("2_b56sk")])
+damage = 10
+block = 13
+name = "Entrapment"
+cost = 2
+icon = SubResource("AtlasTexture_b56sk")
+tooltip_statuses = Array[ExtResource("1_ba1br")]([ExtResource("5_whxrm")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

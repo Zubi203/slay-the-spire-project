@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://1gyeumwpsqdd"]
+
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_vrh3u"]
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="2_dbb0g"]
+[ext_resource type="Script" uid="uid://brb6yrds0wjxy" path="res://Scripts/victory_screen.gd" id="2_m5bpc"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="3_m5bpc"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="4_ha7rp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+line_spacing = 0.0
+font = ExtResource("2_dbb0g")
+font_size = 128
+font_color = Color(0.50199986, 1, 0.17000002, 1)
+outline_size = 32
+outline_color = Color(0.023023427, 0.0951572, 7.821247e-08, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_65ton"]
+font = ExtResource("3_m5bpc")
+font_size = 36
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="VictoryScreen" type="Control" unique_id=1740458358 node_paths=PackedStringArray("victory_label", "flavor_text_label", "button_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_vrh3u")
+script = ExtResource("2_m5bpc")
+victory_label = NodePath("VBoxContainer/CenterContainer/VictoryLabel")
+flavor_text_label = NodePath("VBoxContainer/CenterContainer3/FlavorTextLabel")
+button_container = NodePath("VBoxContainer/CenterContainer2/ButtonContainer")
+flavor_text_fast = "The wounded Tyrant King retreats into the jungle"
+flavor_text_slow = "... for now..."
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1068797791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1658087894]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Padding" type="Control" parent="VBoxContainer" unique_id=1154948455]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=1215019199]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VictoryLabel" type="Label" parent="VBoxContainer/CenterContainer" unique_id=1621809394]
+custom_minimum_size = Vector2(465, 130)
+layout_mode = 2
+text = "VICTORY!"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer" unique_id=1284213934]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FlavorTextLabel" type="Label" parent="VBoxContainer/CenterContainer3" unique_id=1654056632]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_65ton")
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer" unique_id=1173749654]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer2" unique_id=95227714]
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer/CenterContainer2/ButtonContainer" unique_id=360211551]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "PLAY AGAIN"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/CenterContainer2/ButtonContainer/PlayAgainButton" unique_id=1157750935]
+script = ExtResource("4_ha7rp")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer/CenterContainer2/ButtonContainer" unique_id=1002793243]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MAIN MENU"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/CenterContainer2/ButtonContainer/MainMenuButton" unique_id=1796047118]
+script = ExtResource("4_ha7rp")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="Padding2" type="Control" parent="VBoxContainer" unique_id=1651780097]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/ButtonContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/ButtonContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

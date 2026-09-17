@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://7fpd1bxkhxvk"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_fgtpl"]
+[ext_resource type="Resource" uid="uid://cm0uj1usymxdl" path="res://Resources/Buffs/endure.tres" id="2_r6aiq"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="3_p5fcp"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_r6aiq"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="5_p5fcp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5wvb"]
+atlas = ExtResource("3_r6aiq")
+region = Rect2(96, 2656, 32, 32)
+
+[resource]
+script = ExtResource("3_p5fcp")
+buffs_to_apply = Array[ExtResource("1_fgtpl")]([ExtResource("2_r6aiq")])
+block = 9
+name = "Phalanx"
+type = 1
+icon = SubResource("AtlasTexture_u5wvb")
+tooltip_statuses = Array[ExtResource("1_fgtpl")]([ExtResource("5_p5fcp")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

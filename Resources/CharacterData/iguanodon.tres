@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://r862ghgpv02s"]
+
+[ext_resource type="SpriteFrames" uid="uid://b0mfd350gxe0c" path="res://Resources/SpriteFrames/iguanodon.tres" id="1_7xso6"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_ygjto"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_ebt53"]
+[ext_resource type="Resource" uid="uid://d11y5jmw6ha50" path="res://Resources/EnemyCards/heavy_claw.tres" id="3_tj0xd"]
+[ext_resource type="Resource" uid="uid://dov23s1snkciq" path="res://Resources/EnemyCards/crush_claw.tres" id="4_ctjsn"]
+[ext_resource type="Resource" uid="uid://c1s4u2nk8syw7" path="res://Resources/EnemyCards/scaled_hide.tres" id="4_fvfkb"]
+[ext_resource type="Resource" uid="uid://cvwhbq7wm1ni1" path="res://Resources/EnemyCards/crunch.tres" id="5_fvfkb"]
+[ext_resource type="Resource" uid="uid://cp7xy6jwhgfhi" path="res://Resources/EnemyCards/hearty_recovery.tres" id="6_ve0f3"]
+[ext_resource type="AudioStream" uid="uid://v33awthq1ke6" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoSoftGrunt.wav" id="8_fvfkb"]
+
+[resource]
+script = ExtResource("2_ebt53")
+name = "Iguanodon"
+max_health = 90
+flip_sprite = true
+animation_sprites = ExtResource("1_7xso6")
+base_deck = Array[ExtResource("1_ygjto")]([ExtResource("3_tj0xd"), ExtResource("4_fvfkb"), ExtResource("4_ctjsn"), ExtResource("5_fvfkb"), ExtResource("6_ve0f3"), ExtResource("3_tj0xd"), ExtResource("5_fvfkb"), ExtResource("4_fvfkb"), ExtResource("4_ctjsn")])
+death_sound = ExtResource("8_fvfkb")
+display_entry_text = true
+entry_text = "A Large Ornithopod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

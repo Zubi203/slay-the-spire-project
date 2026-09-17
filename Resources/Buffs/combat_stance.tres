@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatGainOnCardCastStatus" format=3 uid="uid://75ix2lrlgui0"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_qsfbq"]
+[ext_resource type="Script" uid="uid://v30l133lxpns" path="res://Scripts/gain_stat_on_casting_status.gd" id="2_1lkta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkj7t"]
+atlas = ExtResource("1_qsfbq")
+region = Rect2(0, 1440, 32, 32)
+
+[resource]
+script = ExtResource("2_1lkta")
+stat_to_gain = 1
+name = "Combat Stance"
+base_duration = 1
+icon = SubResource("AtlasTexture_nkj7t")
+override_base_description = true
+description = "Whenever an ATTACK card is played, gain 3 Block"
+metadata/_custom_type_script = "uid://v30l133lxpns"

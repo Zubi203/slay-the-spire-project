@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ch0vk6n1h7lee"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q05j"]
+bg_color = Color(0.6392157, 0.4117647, 0.20392157, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9764706, 0.7137255, 0.20784314, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[node name="DiscardEffect" type="Node2D" unique_id=2120979714]
+
+[node name="Panel" type="Panel" parent="." unique_id=2110542409]
+custom_minimum_size = Vector2(60, 90)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8q05j")

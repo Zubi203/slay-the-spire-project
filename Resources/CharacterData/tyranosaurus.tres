@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://qy0mnrlkayqs"]
+
+[ext_resource type="SpriteFrames" uid="uid://bkcdcee50hy5q" path="res://Resources/SpriteFrames/tyranosaurus.tres" id="1_jpvfs"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_pgh51"]
+[ext_resource type="Resource" uid="uid://betqyo0tpupc3" path="res://Resources/EnemyCards/fury_attack.tres" id="2_34nf6"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_fhgdb"]
+[ext_resource type="Resource" uid="uid://d0b2y3st1x3ye" path="res://Resources/EnemyCards/tyrants_roar.tres" id="3_1yplr"]
+[ext_resource type="Resource" uid="uid://cf2c36wyptvd1" path="res://Resources/EnemyCards/devour.tres" id="5_w4et3"]
+[ext_resource type="Resource" uid="uid://dqiixtkqbk0vo" path="res://Resources/EnemyCards/tyrants_maw.tres" id="6_6afxm"]
+[ext_resource type="Resource" uid="uid://duihx6yw6u3in" path="res://Resources/EnemyCards/serrated_teeth.tres" id="7_mf35i"]
+[ext_resource type="Resource" uid="uid://cvwhbq7wm1ni1" path="res://Resources/EnemyCards/crunch.tres" id="8_g0i0j"]
+[ext_resource type="AudioStream" uid="uid://c4wsccgsyk6gk" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoQuickLoudRoar.wav" id="9_w4et3"]
+
+[resource]
+script = ExtResource("2_fhgdb")
+name = "Tyranosaurus"
+max_health = 140
+flip_sprite = true
+animation_sprites = ExtResource("1_jpvfs")
+sprite_scale_multiplier = 1.2
+base_deck = Array[ExtResource("1_pgh51")]([ExtResource("3_1yplr"), ExtResource("2_34nf6"), ExtResource("5_w4et3"), ExtResource("6_6afxm"), ExtResource("3_1yplr"), ExtResource("6_6afxm"), ExtResource("7_mf35i"), ExtResource("8_g0i0j"), ExtResource("3_1yplr"), ExtResource("2_34nf6"), ExtResource("6_6afxm"), ExtResource("7_mf35i")])
+death_sound = ExtResource("9_w4et3")
+display_entry_text = true
+entry_text = "A Theropod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

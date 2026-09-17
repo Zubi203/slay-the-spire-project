@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bxnjn7l2t3to4"]
+
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="1_m3pxa"]
+[ext_resource type="Script" uid="uid://dencguxr7sfq" path="res://Scripts/number_effect_label.gd" id="2_cdcck"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ekt21"]
+resource_local_to_scene = true
+font = ExtResource("1_m3pxa")
+font_size = 6
+font_color = Color(0.53, 1, 0.90599996, 1)
+outline_size = 2
+outline_color = Color(0.034499995, 0.23, 0.19089998, 1)
+
+[node name="NumberEffectLabel" type="Label" unique_id=1846599971]
+z_index = 80
+offset_right = 40.0
+offset_bottom = 23.0
+text = "25!"
+label_settings = SubResource("LabelSettings_ekt21")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_cdcck")
+block_color = Color(0.5294118, 1, 0.90588236, 1)
+block_border_color = Color(0.03529412, 0.23137255, 0.19215687, 1)
+negative_color = Color(1, 0.5186701, 0.48948258, 1)
+negative_border_color = Color(0.21176471, 0.011764706, 0.011764706, 1)
+positive_color = Color(0.5411765, 1, 0.30980393, 1)
+positive_border_color = Color(0.03137255, 0.1254902, 0, 1)
+crit_color = Color(1, 0.8666667, 0.10980392, 1)
+crit_border_color = Color(0.69803923, 0, 0, 1)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://dqiixtkqbk0vo"]
+
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_04x8t"]
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_inx8p"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_is14v"]
+
+[resource]
+script = ExtResource("1_inx8p")
+damage = 27
+name = "Tyrant's Maw"
+cost = 0
+icon = ExtResource("1_04x8t")
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

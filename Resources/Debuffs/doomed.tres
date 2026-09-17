@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DelayedDamageStatus" format=3 uid="uid://d3lxlh4t3go56"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_5nq50"]
+[ext_resource type="Script" uid="uid://0vu2myqsshwu" path="res://Scripts/delayed_damage_status.gd" id="1_eddft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nq50"]
+atlas = ExtResource("1_5nq50")
+region = Rect2(0, 1345, 32, 32)
+
+[resource]
+script = ExtResource("1_eddft")
+damage = 30
+buff_type = 1
+name = "Doomed"
+base_duration = 2
+icon = SubResource("AtlasTexture_5nq50")
+stackable = true
+metadata/_custom_type_script = "uid://0vu2myqsshwu"

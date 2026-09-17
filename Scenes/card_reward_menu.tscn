@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://0j0ur0drjk8b"]
+
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="1_5iw3i"]
+[ext_resource type="Script" uid="uid://bn10m7tmt6lqt" path="res://Scenes/card_reward_menu.gd" id="1_k3i15"]
+[ext_resource type="PackedScene" uid="uid://v4su1oejnjob" path="res://Scenes/card_button.tscn" id="2_0gjgw"]
+[ext_resource type="AudioStream" uid="uid://bb1a640mvhg2n" path="res://Audio/PrehistoricSoundPack/SFX_Files/ButtonClick2.wav" id="2_qcdl6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("1_5iw3i")
+font_size = 70
+outline_size = 40
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CardRewardMenu" type="Control" unique_id=452861749 node_paths=PackedStringArray("card_buttons", "background", "text_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3i15")
+card_buttons = [NodePath("VBoxContainer/HBoxContainer/CardButton"), NodePath("VBoxContainer/HBoxContainer/CardButton2"), NodePath("VBoxContainer/HBoxContainer/CardButton3")]
+background = NodePath("ColorRect")
+text_label = NodePath("VBoxContainer/Label")
+select_sound = ExtResource("2_qcdl6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=901088913]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=91721752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Padding2" type="Control" parent="VBoxContainer" unique_id=692439500]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=240128151]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Choose a card to add to your deck"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=481586749]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Padding2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1531364155]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CardButton" parent="VBoxContainer/HBoxContainer" unique_id=1470766749 instance=ExtResource("2_0gjgw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardButton2" parent="VBoxContainer/HBoxContainer" unique_id=1497939500 instance=ExtResource("2_0gjgw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardButton3" parent="VBoxContainer/HBoxContainer" unique_id=1326382642 instance=ExtResource("2_0gjgw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Padding3" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1044041543]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Padding" type="Control" parent="VBoxContainer" unique_id=241279784]
+layout_mode = 2
+size_flags_vertical = 3

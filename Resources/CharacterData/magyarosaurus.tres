@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dl5ijueddbiy1"]
+
+[ext_resource type="SpriteFrames" uid="uid://b8qfgcmgt1j5e" path="res://Resources/SpriteFrames/magyarosaurus.tres" id="1_2hbb5"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_fcq61"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_nl5jg"]
+[ext_resource type="Resource" uid="uid://btbye1wpwwiqr" path="res://Resources/EnemyCards/rest.tres" id="3_2hbb5"]
+[ext_resource type="Resource" uid="uid://bi1fhi6hivgdw" path="res://Resources/EnemyCards/stomp.tres" id="3_rumyk"]
+[ext_resource type="Resource" uid="uid://c5tkbl5j8dehn" path="res://Resources/EnemyCards/tail_swipe.tres" id="4_e7f7j"]
+[ext_resource type="AudioStream" uid="uid://v33awthq1ke6" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoSoftGrunt.wav" id="6_e7f7j"]
+
+[resource]
+script = ExtResource("2_nl5jg")
+name = "Magyarosaurus"
+max_health = 95
+flip_sprite = true
+animation_sprites = ExtResource("1_2hbb5")
+base_deck = Array[ExtResource("1_fcq61")]([ExtResource("3_rumyk"), ExtResource("4_e7f7j"), ExtResource("3_2hbb5"), ExtResource("4_e7f7j"), ExtResource("3_rumyk"), ExtResource("3_2hbb5")])
+death_sound = ExtResource("6_e7f7j")
+display_entry_text = true
+entry_text = "A Small Sauropod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

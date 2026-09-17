@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dyuyfrnj58e8w"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_d2qsa"]
+[ext_resource type="SpriteFrames" uid="uid://dcft5rexheomp" path="res://Resources/SpriteFrames/indominus.tres" id="1_fwsay"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_r10id"]
+[ext_resource type="Resource" uid="uid://cwytduxd46kkj" path="res://Resources/EnemyCards/reign_of_terror.tres" id="3_t6ktc"]
+[ext_resource type="Resource" uid="uid://biuhmfwdtlkm2" path="res://Resources/EnemyCards/double_bite.tres" id="4_icl8e"]
+[ext_resource type="Resource" uid="uid://dlwvm8ewo0km7" path="res://Resources/EnemyCards/prehistoric_might.tres" id="5_as5pc"]
+[ext_resource type="Resource" uid="uid://bphd2dr41b6ie" path="res://Resources/EnemyCards/apex_predator.tres" id="6_hg484"]
+[ext_resource type="Resource" uid="uid://5t0sgjx1udmd" path="res://Resources/EnemyCards/kings_maw.tres" id="7_8b4jh"]
+[ext_resource type="Resource" uid="uid://tyh4lgoxbecu" path="res://Resources/EnemyCards/feast.tres" id="8_pgxxj"]
+[ext_resource type="AudioStream" uid="uid://i2upv5u6tg11" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoLongLoudRoar.wav" id="9_icl8e"]
+
+[resource]
+script = ExtResource("2_r10id")
+name = "Indominus Rex"
+max_health = 350
+flip_sprite = true
+animation_sprites = ExtResource("1_fwsay")
+sprite_scale_multiplier = 1.5
+base_deck = Array[ExtResource("1_d2qsa")]([ExtResource("3_t6ktc"), ExtResource("4_icl8e"), ExtResource("5_as5pc"), ExtResource("6_hg484"), ExtResource("7_8b4jh"), ExtResource("4_icl8e"), ExtResource("8_pgxxj"), ExtResource("3_t6ktc"), ExtResource("6_hg484"), ExtResource("7_8b4jh"), ExtResource("5_as5pc"), ExtResource("3_t6ktc"), ExtResource("8_pgxxj"), ExtResource("6_hg484"), ExtResource("4_icl8e"), ExtResource("7_8b4jh"), ExtResource("4_icl8e"), ExtResource("5_as5pc"), ExtResource("7_8b4jh"), ExtResource("4_icl8e")])
+death_sound = ExtResource("9_icl8e")
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

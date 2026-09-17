@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EffectOverTimeStatus" format=3 uid="uid://dj2i8ed3a8o42"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_lvv1g"]
+[ext_resource type="Script" uid="uid://d1q1xykusm0y7" path="res://Scripts/effect_over_time_status.gd" id="1_pr1om"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvv1g"]
+atlas = ExtResource("1_lvv1g")
+region = Rect2(256, 2208, 32, 32)
+
+[resource]
+script = ExtResource("1_pr1om")
+effect_type = 1
+stat_gain = 6
+trigger_on = 1
+name = "Vital Spirit"
+base_duration = 4
+icon = SubResource("AtlasTexture_lvv1g")
+stackable = true
+metadata/_custom_type_script = "uid://d1q1xykusm0y7"

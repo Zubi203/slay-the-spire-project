@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="HealCardData" format=3 uid="uid://cp7xy6jwhgfhi"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_d3sm4"]
+[ext_resource type="Script" uid="uid://cg7pioly572o0" path="res://Scripts/heal_card_data.gd" id="1_g8krt"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_mca20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3sm4"]
+atlas = ExtResource("1_d3sm4")
+region = Rect2(64, 1185, 32, 32)
+
+[resource]
+script = ExtResource("1_g8krt")
+heal_amount = 25
+name = "Hearty Recovery"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_d3sm4")
+metadata/_custom_type_script = "uid://cg7pioly572o0"

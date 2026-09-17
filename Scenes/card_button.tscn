@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://v4su1oejnjob"]
+
+[ext_resource type="Texture2D" uid="uid://8cv4viay6hj4" path="res://Graphics/Card/card.png" id="1_utlui"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="2_55g38"]
+[ext_resource type="Script" uid="uid://csxcugrsybmai" path="res://Scripts/card_button.gd" id="2_l0e6k"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="3_28rp2"]
+[ext_resource type="Resource" uid="uid://bid1dddnyw0o6" path="res://Resources/PlayerCards/Status/furious_retaliation.tres" id="3_i0jc6"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="4_l0e6k"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="5_0lqi3"]
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="7_0lqi3"]
+[ext_resource type="PackedScene" uid="uid://chm73tk71hng3" path="res://Scenes/status_tooltip.tscn" id="9_ahci1"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="10_t4bgk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+line_spacing = 0.0
+font = ExtResource("3_28rp2")
+font_size = 50
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_65ton"]
+line_spacing = 0.0
+font = ExtResource("4_l0e6k")
+font_size = 26
+outline_size = 8
+outline_color = Color(0.28662044, 0.1845333, 0.07720364, 1)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.57254905)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28rp2"]
+bg_color = Color(0.6431373, 0.41568628, 0.20392157, 1)
+border_width_left = 5
+border_width_top = 5
+border_color = Color(0.33333334, 0.21568628, 0.08627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0jc6"]
+atlas = ExtResource("5_0lqi3")
+region = Rect2(192, 4288, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0jc6"]
+font = ExtResource("7_0lqi3")
+font_size = 21
+font_color = Color(0.961919, 0.9419476, 0.7248465, 1)
+outline_size = 5
+outline_color = Color(0.14072439, 0.082036145, 0.019499049, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.21960784)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpw1u"]
+line_spacing = 0.0
+font = ExtResource("3_28rp2")
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0.3593821, 0.31118178, 0.16149604, 1)
+
+[node name="CardButton" type="TextureButton" unique_id=1470766749 node_paths=PackedStringArray("tooltip_container")]
+custom_minimum_size = Vector2(420, 630)
+custom_maximum_size = Vector2(420, 630)
+offset_right = 300.0
+offset_bottom = 450.0
+texture_normal = ExtResource("1_utlui")
+stretch_mode = 5
+script = ExtResource("2_l0e6k")
+card_data = ExtResource("3_i0jc6")
+tooltip_container = NodePath("TooltipContainer")
+tooltip_scene = ExtResource("9_ahci1")
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="." unique_id=1291346689]
+script = ExtResource("2_55g38")
+pressed_scale_increase = 0.1
+rotate_on_hover = false
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="CostLabel" type="Label" parent="." unique_id=1444795782]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45500004
+anchor_top = 0.19411112
+anchor_right = 0.52833337
+anchor_bottom = 0.29262963
+offset_left = -5.5000153
+offset_top = -5.350006
+offset_right = 5.4999847
+offset_bottom = 5.3166656
+grow_horizontal = 2
+text = "3"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="." unique_id=1004533287]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26666668
+anchor_top = 0.34444445
+anchor_right = 0.73333335
+anchor_bottom = 0.44444445
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 19.0
+offset_bottom = -5.0
+grow_horizontal = 2
+text = "Furious Retaliation"
+label_settings = SubResource("LabelSettings_65ton")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1455134415]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40793648
+anchor_top = 0.45873016
+anchor_right = 0.5968254
+anchor_bottom = 0.5936508
+offset_left = -8.333328
+offset_top = -4.0
+offset_right = 8.333328
+offset_bottom = 10.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_28rp2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="." unique_id=448766182]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4595238
+anchor_top = 0.5031746
+anchor_right = 0.5404762
+anchor_bottom = 0.5501587
+offset_left = -28.0
+offset_top = -23.0
+offset_right = 28.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_i0jc6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TypeLabel" type="Label" parent="." unique_id=1125050746]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 90.0
+offset_top = 128.0
+offset_right = 156.0
+offset_bottom = 165.0
+text = "POWER"
+label_settings = SubResource("LabelSettings_i0jc6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TooltipContainer" type="VBoxContainer" parent="." unique_id=655454856]
+custom_minimum_size = Vector2(250, 800)
+custom_maximum_size = Vector2(250, 800)
+layout_mode = 0
+offset_left = 356.0
+offset_top = 107.0
+offset_right = 656.0
+offset_bottom = 907.0
+mouse_filter = 2
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=714744329]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26666668
+anchor_top = 0.5877778
+anchor_right = 0.73333335
+anchor_bottom = 0.73135805
+offset_left = -19.0
+offset_top = 2.5
+offset_right = 19.0
+offset_bottom = 33.888885
+grow_horizontal = 2
+text = "Deal 11 damage
+Apply Bleeding"
+label_settings = SubResource("LabelSettings_xpw1u")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="." unique_id=709553159]
+script = ExtResource("10_t4bgk")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"

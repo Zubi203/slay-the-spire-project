@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DebuffScalingAttackCardData" format=3 uid="uid://ettgfddwqqaw"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_l5hdf"]
+[ext_resource type="Script" uid="uid://cet1b4d1ryb28" path="res://Scripts/debuff_scaling_attack_card_data.gd" id="2_nvoew"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_nvoew"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yb7g"]
+atlas = ExtResource("1_l5hdf")
+region = Rect2(288, 1440, 32, 32)
+
+[resource]
+script = ExtResource("2_nvoew")
+damage_per_debuff = 5
+damage = 7
+name = "Open Wounds"
+icon = SubResource("AtlasTexture_3yb7g")
+metadata/_custom_type_script = "uid://cet1b4d1ryb28"

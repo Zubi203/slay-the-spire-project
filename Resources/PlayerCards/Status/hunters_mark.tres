@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dy5j2ecfsj6v"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_kn0i6"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_15gkk"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_djnan"]
+[ext_resource type="Resource" uid="uid://cgc2v25mhbhc2" path="res://Resources/Debuffs/choked.tres" id="2_tbkn3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15gkk"]
+atlas = ExtResource("2_15gkk")
+region = Rect2(0, 1536, 32, 32)
+
+[resource]
+script = ExtResource("2_djnan")
+debuffs_to_apply = Array[ExtResource("1_kn0i6")]([ExtResource("2_tbkn3")])
+damage = 11
+name = "Hunter's Mark"
+icon = SubResource("AtlasTexture_15gkk")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

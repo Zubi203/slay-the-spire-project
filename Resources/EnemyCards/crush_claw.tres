@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dov23s1snkciq"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_3tbm2"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_18pvm"]
+[ext_resource type="Resource" uid="uid://cmqp2ogu1rmwp" path="res://Resources/Debuffs/vulnerable.tres" id="2_vtohq"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="3_r558i"]
+
+[resource]
+script = ExtResource("2_18pvm")
+debuffs_to_apply = Array[ExtResource("1_3tbm2")]([ExtResource("2_vtohq")])
+damage = 15
+name = "Crush Claw"
+cost = 0
+icon = ExtResource("3_r558i")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

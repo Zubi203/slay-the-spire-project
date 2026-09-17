@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://dql3lomdep371"]
+
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="1_f60mu"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_jkrcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkrcn"]
+atlas = ExtResource("1_jkrcn")
+region = Rect2(224, 1697, 32, 32)
+
+[resource]
+script = ExtResource("1_f60mu")
+intensity = 3
+name = "Dexterity"
+icon = SubResource("AtlasTexture_jkrcn")
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

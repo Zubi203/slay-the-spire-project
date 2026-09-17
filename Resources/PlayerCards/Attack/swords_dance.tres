@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DoubleStatusCard" format=3 uid="uid://blbyiifq3gbtf"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_w0jlc"]
+[ext_resource type="Script" uid="uid://b8pkfy4n0iq05" path="res://Scripts/double_status_card.gd" id="2_0kwu5"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="2_ishi7"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_ykdui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ishi7"]
+atlas = ExtResource("3_ykdui")
+region = Rect2(160, 2336, 32, 32)
+
+[resource]
+script = ExtResource("2_0kwu5")
+buffs_to_apply = Array[ExtResource("1_w0jlc")]([ExtResource("2_ishi7")])
+name = "Swords Dance"
+type = 1
+icon = SubResource("AtlasTexture_ishi7")
+metadata/_custom_type_script = "uid://b8pkfy4n0iq05"

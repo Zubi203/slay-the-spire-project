@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://bg4ijd3ovhfla"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_8i56q"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_gsb0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsb0g"]
+atlas = ExtResource("1_gsb0g")
+region = Rect2(96, 2144, 32, 32)
+
+[resource]
+script = ExtResource("1_8i56q")
+multiplier = 0.25
+stat_to_modify = 1
+buff_type = 1
+name = "Jungle Fever"
+icon = SubResource("AtlasTexture_gsb0g")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

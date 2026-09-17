@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EffectOverTimeStatus" format=3 uid="uid://csdl7wrcionmy"]
+
+[ext_resource type="Script" uid="uid://d1q1xykusm0y7" path="res://Scripts/effect_over_time_status.gd" id="1_5jpck"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_ptdlt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptdlt"]
+atlas = ExtResource("1_ptdlt")
+region = Rect2(256, 2080, 32, 32)
+
+[resource]
+script = ExtResource("1_5jpck")
+stat_gain = 4
+trigger_on = 1
+buff_type = 1
+name = "Poisoned"
+base_duration = 4
+icon = SubResource("AtlasTexture_ptdlt")
+stackable = true
+metadata/_custom_type_script = "uid://d1q1xykusm0y7"

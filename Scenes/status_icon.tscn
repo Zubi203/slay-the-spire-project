@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://cx3qopy8s8a4u"]
+
+[ext_resource type="Script" uid="uid://btql4w0ytanp7" path="res://Scripts/status_icon.gd" id="1_6013n"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_bm01e"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="2_n3ykj"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="3_omcvc"]
+[ext_resource type="Script" uid="uid://dq2hi57dpb6ps" path="res://Scripts/bouncy_text.gd" id="5_cpilp"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="6_dtyw2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpw1u"]
+bg_color = Color(0.19793722, 0.19793725, 0.19793713, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09923173, 0.09923177, 0.0992317, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2w44"]
+atlas = ExtResource("1_bm01e")
+region = Rect2(416, 2176, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("3_omcvc")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2w44"]
+bg_color = Color(0.0765, 0.093641646, 0.17, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4860856, 0.5331459, 0.73317266, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.46666667)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+anti_aliasing = false
+
+[node name="StatusIcon" type="Button" unique_id=1506766641]
+visible = false
+custom_minimum_size = Vector2(12, 12)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xpw1u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xpw1u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xpw1u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xpw1u")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xpw1u")
+script = ExtResource("1_6013n")
+status_data = ExtResource("2_n3ykj")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=799984063]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_h2w44")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=2013554306]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+label_settings = SubResource("LabelSettings_h2w44")
+vertical_alignment = 2
+script = ExtResource("5_cpilp")
+
+[node name="DescriptionPanel" type="PanelContainer" parent="." unique_id=1404591841]
+unique_name_in_owner = true
+visible = false
+z_index = 3
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -19.0
+offset_right = 61.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(0, 20)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2w44")
+
+[node name="MarginContainer" type="MarginContainer" parent="DescriptionPanel" unique_id=1229354236]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="DescriptionText" type="RichTextLabel" parent="DescriptionPanel/MarginContainer" unique_id=1580525757]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_omcvc")
+theme_override_fonts/bold_font = ExtResource("6_dtyw2")
+theme_override_font_sizes/normal_font_size = 4
+theme_override_font_sizes/bold_font_size = 5
+theme_override_font_sizes/bold_italics_font_size = 4
+theme_override_font_sizes/italics_font_size = 4
+theme_override_font_sizes/mono_font_size = 4
+bbcode_enabled = true
+text = "[b]Weakness[/b]
+Incoming damage increased by 50%
+Duration: 3 turns"
+scroll_active = false
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

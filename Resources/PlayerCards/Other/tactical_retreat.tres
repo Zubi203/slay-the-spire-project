@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://428ttyb2s5aq"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_73h4x"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_fx1i5"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_hhakc"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_fx1i5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx1i5"]
+atlas = ExtResource("2_fx1i5")
+region = Rect2(319, 1761, 32, 32)
+
+[resource]
+script = ExtResource("2_hhakc")
+block = 8
+cards_to_draw = 1
+name = "Tactical Retreat"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_fx1i5")
+tooltip_statuses = Array[ExtResource("1_73h4x")]([ExtResource("4_fx1i5")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

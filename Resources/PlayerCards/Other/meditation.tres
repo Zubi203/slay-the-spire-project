@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnergyPerCardInDrawPileCardData" format=3 uid="uid://c7q1shdm5ngnv"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_1tp76"]
+[ext_resource type="Script" uid="uid://dv8v48gvmgjb2" path="res://Scripts/energy_per_card_in_draw_pile.gd" id="1_v6vqv"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_gofsi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tp76"]
+atlas = ExtResource("1_1tp76")
+region = Rect2(480, 2560, 32, 32)
+
+[resource]
+script = ExtResource("1_v6vqv")
+name = "Meditation"
+type = 1
+icon = SubResource("AtlasTexture_1tp76")
+metadata/_custom_type_script = "uid://dv8v48gvmgjb2"

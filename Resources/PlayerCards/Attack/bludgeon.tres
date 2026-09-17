@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://c3ls2eqewcr0a"]
+
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_452ph"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_ksdoo"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_nsynk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksdoo"]
+atlas = ExtResource("1_ksdoo")
+region = Rect2(128, 2400, 32, 32)
+
+[resource]
+script = ExtResource("1_452ph")
+damage = 32
+name = "Bludgeon"
+cost = 3
+icon = SubResource("AtlasTexture_ksdoo")
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

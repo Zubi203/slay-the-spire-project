@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://cf2c36wyptvd1"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_pn85f"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="2_3ntk0"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_jkog2"]
+
+[resource]
+script = ExtResource("2_jkog2")
+damage = 13
+heal = 10
+name = "Devour"
+cost = 0
+icon = ExtResource("2_3ntk0")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

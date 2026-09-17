@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://b2htcgw8u6yh2"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_be54q"]
+[ext_resource type="SpriteFrames" uid="uid://f3nfwwtl2410" path="res://Resources/SpriteFrames/spinosaurus.tres" id="1_jxv8n"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_75qii"]
+[ext_resource type="Resource" uid="uid://bgtjpmead56if" path="res://Resources/EnemyCards/dive.tres" id="3_5xkcx"]
+[ext_resource type="Resource" uid="uid://betqyo0tpupc3" path="res://Resources/EnemyCards/fury_attack.tres" id="3_jxv8n"]
+[ext_resource type="Resource" uid="uid://cppcg1jeamlnd" path="res://Resources/EnemyCards/pounce.tres" id="4_vuuou"]
+[ext_resource type="Resource" uid="uid://duihx6yw6u3in" path="res://Resources/EnemyCards/serrated_teeth.tres" id="5_62tav"]
+[ext_resource type="Resource" uid="uid://dnrotks8rjapu" path="res://Resources/EnemyCards/submerge.tres" id="6_plx78"]
+[ext_resource type="Resource" uid="uid://b5sb1440177sx" path="res://Resources/EnemyCards/roar.tres" id="8_choix"]
+[ext_resource type="AudioStream" uid="uid://d1c5vpyeuam40" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoGrowl.wav" id="9_vuuou"]
+
+[resource]
+script = ExtResource("2_75qii")
+name = "Spinosaurus"
+max_health = 100
+flip_sprite = true
+animation_sprites = ExtResource("1_jxv8n")
+base_deck = Array[ExtResource("1_be54q")]([ExtResource("3_5xkcx"), ExtResource("4_vuuou"), ExtResource("5_62tav"), ExtResource("6_plx78"), ExtResource("3_jxv8n"), ExtResource("3_5xkcx"), ExtResource("8_choix"), ExtResource("4_vuuou"), ExtResource("6_plx78"), ExtResource("4_vuuou"), ExtResource("3_jxv8n")])
+death_sound = ExtResource("9_vuuou")
+display_entry_text = true
+entry_text = "An Archosaur"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

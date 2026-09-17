@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EffectOverTimeStatus" format=3 uid="uid://d03eqjdkwi4yb"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_35ldu"]
+[ext_resource type="Script" uid="uid://d1q1xykusm0y7" path="res://Scripts/effect_over_time_status.gd" id="1_f4sxg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35ldu"]
+atlas = ExtResource("1_35ldu")
+region = Rect2(352, 2240, 32, 32)
+
+[resource]
+script = ExtResource("1_f4sxg")
+effect_type = 4
+stat_gain = 2
+name = "Adaptability"
+icon = SubResource("AtlasTexture_35ldu")
+metadata/_custom_type_script = "uid://d1q1xykusm0y7"

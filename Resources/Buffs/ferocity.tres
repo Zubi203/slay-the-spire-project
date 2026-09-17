@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://dhmufky11e4kr"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_vlv0q"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_yuvbk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuvbk"]
+atlas = ExtResource("1_yuvbk")
+region = Rect2(224, 1440, 32, 32)
+
+[resource]
+script = ExtResource("1_vlv0q")
+stat_to_modify = 2
+name = "Ferocity"
+icon = SubResource("AtlasTexture_yuvbk")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

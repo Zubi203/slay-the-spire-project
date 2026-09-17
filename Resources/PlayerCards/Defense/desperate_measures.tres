@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BlockFromMissingHPCardData" format=3 uid="uid://dxsy0x7xc7g5r"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_hbjrb"]
+[ext_resource type="Script" uid="uid://bqvqqot2ltwxv" path="res://Scripts/block_from_missing_hp_card.gd" id="1_pl3ay"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_kuf8j"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_pc2rc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbjrb"]
+atlas = ExtResource("1_hbjrb")
+region = Rect2(352, 2144, 32, 32)
+
+[resource]
+script = ExtResource("1_pl3ay")
+name = "Desperate Measures"
+type = 1
+icon = SubResource("AtlasTexture_hbjrb")
+tooltip_statuses = Array[ExtResource("3_kuf8j")]([ExtResource("4_pc2rc")])
+metadata/_custom_type_script = "uid://bqvqqot2ltwxv"

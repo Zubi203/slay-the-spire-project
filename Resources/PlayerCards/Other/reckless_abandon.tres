@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://cp3yb6uysqmuo"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_nkp0o"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_1l4j3"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="2_6g0s7"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_cbxtv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g0s7"]
+atlas = ExtResource("3_cbxtv")
+region = Rect2(416, 2336, 32, 32)
+
+[resource]
+script = ExtResource("2_1l4j3")
+buffs_to_apply = Array[ExtResource("1_nkp0o")]([ExtResource("2_6g0s7")])
+energy_gain = 3
+name = "Reckless Abandon"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_6g0s7")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://chm73tk71hng3"]
+
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="1_ipijx"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_o4ers"]
+[ext_resource type="Script" uid="uid://ct0bqvqfrpj2q" path="res://Scripts/status_tooltip.gd" id="1_tqoqm"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="2_o4ers"]
+[ext_resource type="Script" uid="uid://bw7u2deyx1w4l" path="res://Scripts/auto_animate_ui_component.gd" id="5_cjk7a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttniw"]
+bg_color = Color(0.0765, 0.093641646, 0.17, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.4860856, 0.5331459, 0.73317266, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.46666667)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[node name="StatusTooltip" type="PanelContainer" unique_id=1493776150]
+z_index = 500
+custom_minimum_size = Vector2(300, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ttniw")
+script = ExtResource("1_tqoqm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=86257610]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1428026594]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 7
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1813597500]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_o4ers")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusTooltipText" type="RichTextLabel" parent="MarginContainer/HBoxContainer" unique_id=860510433]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("1_ipijx")
+theme_override_fonts/bold_font = ExtResource("2_o4ers")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
+bbcode_enabled = true
+text = "[b]Weakness:[/b]
+Incoming damage is increased by 50%
+Duration: 3 turns"
+autowrap_mode = 2
+vertical_alignment = 1
+
+[node name="AutoAnimateUIComponent" type="Control" parent="." unique_id=2006906027]
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("5_cjk7a")
+anim_when = 1
+scale_from = 1
+metadata/_custom_type_script = "uid://bw7u2deyx1w4l"

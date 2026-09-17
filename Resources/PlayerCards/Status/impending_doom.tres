@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://i02hc2gx4tj3"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_xv584"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_g7a4h"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_hjbrt"]
+[ext_resource type="Resource" uid="uid://d3lxlh4t3go56" path="res://Resources/Debuffs/doomed.tres" id="2_otn4o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjbrt"]
+atlas = ExtResource("2_hjbrt")
+region = Rect2(95, 2208, 32, 32)
+
+[resource]
+script = ExtResource("2_g7a4h")
+debuffs_to_apply = Array[ExtResource("1_xv584")]([ExtResource("2_otn4o")])
+name = "Impending Doom"
+type = 1
+icon = SubResource("AtlasTexture_hjbrt")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

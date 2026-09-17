@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StatGainOnCardCastStatus" format=3 uid="uid://cgc2v25mhbhc2"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_6wlic"]
+[ext_resource type="Script" uid="uid://v30l133lxpns" path="res://Scripts/gain_stat_on_casting_status.gd" id="1_avotx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wlic"]
+atlas = ExtResource("1_6wlic")
+region = Rect2(0, 1472, 32, 32)
+
+[resource]
+script = ExtResource("1_avotx")
+trigger_card_type = 1
+buff_type = 1
+name = "Choked"
+base_duration = 5
+icon = SubResource("AtlasTexture_6wlic")
+override_base_description = true
+description = "Whenever you play a SKILL card, the enemy loses 3 health."
+metadata/_custom_type_script = "uid://v30l133lxpns"

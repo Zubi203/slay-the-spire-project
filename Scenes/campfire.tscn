@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://b8koexvmbbjxx"]
+
+[ext_resource type="PackedScene" uid="uid://os5fhlwjbmqn" path="res://Scenes/checkpoint_button.tscn" id="1_kfptp"]
+[ext_resource type="Script" uid="uid://bjiatmdcj127g" path="res://Scripts/campfire.gd" id="2_qcxes"]
+[ext_resource type="Texture2D" uid="uid://cuxb6xb8mettp" path="res://Audio/rest_site.png" id="3_a7vrp"]
+[ext_resource type="AudioStream" uid="uid://bknijkjrpvl7h" path="res://Audio/PrehistoricSoundPack/SFX_Files/healing sparkle.mp3" id="3_qycku"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7vrp"]
+radius = 53.009434
+
+[sub_resource type="Gradient" id="Gradient_a7vrp"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.32575756, 0.49242425)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_65ton"]
+gradient = SubResource("Gradient_a7vrp")
+width = 16
+height = 16
+fill = 1
+fill_from = Vector2(0.49820143, 0.4910072)
+
+[sub_resource type="Gradient" id="Gradient_qycku"]
+offsets = PackedFloat32Array(0, 0.17832167, 0.48601398, 0.7097902, 0.88461536)
+colors = PackedColorArray(0.99621993, 0.9338068, 0.71825826, 1, 0.99215686, 0.88235295, 0.49803922, 1, 0.9843137, 0.54901963, 0.23921569, 1, 0.8980392, 0.1764706, 0.02745098, 1, 0.22, 0.176, 0.1672, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yhcui"]
+gradient = SubResource("Gradient_qycku")
+
+[sub_resource type="Curve" id="Curve_1j15t"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.848216, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xpw1u"]
+curve = SubResource("Curve_1j15t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h2w44"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(41.81, -1.61, 0)
+emission_shape = 1
+emission_sphere_radius = 9.24
+gravity = Vector3(0, -90, 0)
+scale_min = 0.099999994
+scale_max = 0.7
+scale_curve = SubResource("CurveTexture_xpw1u")
+color_ramp = SubResource("GradientTexture1D_yhcui")
+
+[sub_resource type="Gradient" id="Gradient_1j15t"]
+colors = PackedColorArray(0.44099993, 1, 0.13999999, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xpw1u"]
+gradient = SubResource("Gradient_1j15t")
+width = 16
+height = 16
+fill = 2
+fill_from = Vector2(0.50179857, 0.51258993)
+
+[sub_resource type="Curve" id="Curve_blmeq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.190481, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yhcui"]
+curve = SubResource("Curve_blmeq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_65ton"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -24.78, 0)
+emission_shape_scale = Vector3(61.05, 35.71, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+gravity = Vector3(0, -80, 0)
+scale_min = 0.099999994
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_yhcui")
+
+[node name="Campfire" unique_id=1896656838 node_paths=PackedStringArray("click_particles") instance=ExtResource("1_kfptp")]
+script = ExtResource("2_qcxes")
+click_particles = NodePath("CampfireSelectParticles")
+campfire_click_sound = ExtResource("3_qycku")
+
+[node name="Sprite2D" parent="." index="0" unique_id=2071041185]
+position = Vector2(1, -29.000004)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_a7vrp")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=947165182]
+visible = false
+position = Vector2(4, -15)
+shape = SubResource("CircleShape2D_a7vrp")
+
+[node name="CampfireParticles" type="GPUParticles2D" parent="." index="2" unique_id=466195663]
+amount = 15
+texture = SubResource("GradientTexture2D_65ton")
+lifetime = 1.3
+process_material = SubResource("ParticleProcessMaterial_h2w44")
+
+[node name="CampfireSelectParticles" type="GPUParticles2D" parent="." index="3" unique_id=747137842]
+emitting = false
+amount = 30
+texture = SubResource("GradientTexture2D_xpw1u")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.6
+process_material = SubResource("ParticleProcessMaterial_65ton")

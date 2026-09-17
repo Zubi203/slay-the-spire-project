@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://wlo8fxkc6yhc"]
+
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_jifik"]
+[ext_resource type="PackedScene" uid="uid://b3smdi2fyx8n7" path="res://Scenes/small_card_button.tscn" id="1_k05jh"]
+[ext_resource type="Script" uid="uid://df8k2ykjb4ukr" path="res://Scripts/fade_in_color_rect.gd" id="2_qp53j"]
+[ext_resource type="Script" uid="uid://cpctof7j7fb6j" path="res://Scripts/card_display.gd" id="2_qur38"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="3_qur38"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="5_5a77x"]
+[ext_resource type="Texture2D" uid="uid://ctusbbjdq6jn6" path="res://Graphics/Cross 512 px.png" id="6_6m0h5"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="7_6m0h5"]
+[ext_resource type="Script" uid="uid://dimct1fhrm5my" path="res://Scripts/container_animation.gd" id="9_cmwb3"]
+[ext_resource type="Script" uid="uid://bw7u2deyx1w4l" path="res://Scripts/auto_animate_ui_component.gd" id="10_6dbqt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("3_qur38")
+font_size = 48
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CardDisplay" type="Control" unique_id=612624972 node_paths=PackedStringArray("card_container", "title_label", "tooltip_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_jifik")
+script = ExtResource("2_qur38")
+card_container = NodePath("CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/CardContainerScroll/CardContainer")
+card_button_scene = ExtResource("1_k05jh")
+title_label = NodePath("CenterContainer/PanelContainer/VBoxContainer/Label")
+tooltip_container = NodePath("CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/Panel/MarginContainer/TooltipContainer")
+
+[node name="FadeInColorRect" type="ColorRect" parent="." unique_id=1076529488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_qp53j")
+fade_in_duration = 0.2
+metadata/_custom_type_script = "uid://df8k2ykjb4ukr"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1729274720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1772066760]
+custom_minimum_size = Vector2(1600, 900)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=819168355]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1108039556]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CloseButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/Control" unique_id=397839767]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -85.0
+offset_top = 18.0
+offset_right = -15.0
+offset_bottom = 88.0
+grow_horizontal = 0
+theme_type_variation = &"RedButton"
+expand_icon = true
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/VBoxContainer/Control/CloseButton" unique_id=1298481831]
+script = ExtResource("5_5a77x")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/PanelContainer/VBoxContainer/Control/CloseButton" unique_id=2098012951]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_6m0h5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/VBoxContainer/Control/CloseButton" unique_id=1452190323]
+script = ExtResource("7_6m0h5")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=278385721]
+layout_mode = 2
+text = "DISCARD PILE"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1307738951]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=233902069]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=656205265]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=499677834]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/Panel" unique_id=139100272]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="CardContainerScroll" type="ScrollContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/Panel/MarginContainer" unique_id=1720054565]
+layout_mode = 2
+scroll_hint_mode = 1
+
+[node name="CardContainer" type="GridContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/CardContainerScroll" unique_id=141161211]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/v_separation = 40
+columns = 5
+script = ExtResource("9_cmwb3")
+anim_when = 1
+delay_appear = 0.15
+delay_between_elements = 0.03
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=25755408]
+layout_mode = 2
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2" unique_id=1583675537]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/Panel" unique_id=534655740]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TooltipContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/MarginContainer2/Panel/MarginContainer" unique_id=886465121]
+layout_mode = 2
+
+[node name="AutoAnimateUIComponent" type="Control" parent="." unique_id=881973781]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_6dbqt")
+anim_when = 1
+metadata/_custom_type_script = "uid://bw7u2deyx1w4l"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Control/CloseButton" to="." method="_on_close_button_pressed"]

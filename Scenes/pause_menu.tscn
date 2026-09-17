@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://cgsie8hk4bnmt"]
+
+[ext_resource type="Script" uid="uid://df8k2ykjb4ukr" path="res://Scripts/fade_in_color_rect.gd" id="1_emv3i"]
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_k0w1u"]
+[ext_resource type="Script" uid="uid://cut7u5incic5w" path="res://Scripts/pause_menu.gd" id="2_vmyb1"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="3_bpi0q"]
+[ext_resource type="PackedScene" uid="uid://brnwayjaaqm70" path="res://Scenes/reset_confirmation.tscn" id="3_myy0f"]
+[ext_resource type="PackedScene" uid="uid://drsfr4pr4436l" path="res://Scenes/settings_menu.tscn" id="4_sjs17"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="4_vmyb1"]
+[ext_resource type="PackedScene" uid="uid://wlo8fxkc6yhc" path="res://Scenes/card_display.tscn" id="5_u8tnp"]
+[ext_resource type="Script" uid="uid://dimct1fhrm5my" path="res://Scripts/container_animation.gd" id="8_ix48p"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="9_stj27"]
+[ext_resource type="Script" uid="uid://bw7u2deyx1w4l" path="res://Scripts/auto_animate_ui_component.gd" id="11_524vl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("3_bpi0q")
+font_size = 42
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.48235294)
+shadow_offset = Vector2(4, 4)
+
+[node name="PauseMenu" type="Control" unique_id=1205717269 node_paths=PackedStringArray("buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_k0w1u")
+script = ExtResource("2_vmyb1")
+reset_confirmation_scene = ExtResource("3_myy0f")
+settings_scene = ExtResource("4_sjs17")
+card_display_scene = ExtResource("5_u8tnp")
+buttons = [NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResumeButton"), NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/SettingsButton"), NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/CompendiumButton"), NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResetRunButton")]
+
+[node name="FadeInColorRect" type="ColorRect" parent="." unique_id=1450551945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_emv3i")
+fade_in_duration = 0.2
+metadata/_custom_type_script = "uid://df8k2ykjb4ukr"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1455843119]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1156965009]
+custom_minimum_size = Vector2(450, 560)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1286913696]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=283884142]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel" unique_id=1560529054]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer" unique_id=1665154714]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer" unique_id=929440899]
+layout_mode = 2
+text = "PAUSED"
+label_settings = SubResource("LabelSettings_h2w44")
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer" unique_id=481813996]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2" unique_id=432462038]
+custom_minimum_size = Vector2(250, 380)
+layout_mode = 2
+theme_override_constants/separation = 18
+script = ExtResource("8_ix48p")
+anim_when = 1
+delay_appear = 0.1
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=935591357]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "RESUME"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResumeButton" unique_id=1523777563]
+script = ExtResource("4_vmyb1")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResumeButton" unique_id=2012896262]
+script = ExtResource("9_stj27")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=249293962]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/SettingsButton" unique_id=549716786]
+script = ExtResource("4_vmyb1")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/SettingsButton" unique_id=413876355]
+script = ExtResource("9_stj27")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="CompendiumButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=192834190]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "COMPENDIUM"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/CompendiumButton" unique_id=1731499911]
+script = ExtResource("4_vmyb1")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/CompendiumButton" unique_id=1029845754]
+script = ExtResource("9_stj27")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=1643066061]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "MAIN MENU"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/MainMenuButton" unique_id=489459219]
+script = ExtResource("4_vmyb1")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/MainMenuButton" unique_id=159652604]
+script = ExtResource("9_stj27")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="ResetRunButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer" unique_id=454079665]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"RedButton"
+theme_override_font_sizes/font_size = 30
+text = "RESET RUN"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResetRunButton" unique_id=151240620]
+script = ExtResource("4_vmyb1")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResetRunButton" unique_id=1443351968]
+script = ExtResource("9_stj27")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="AutoAnimateUIComponent" type="Control" parent="." unique_id=1713677913]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_524vl")
+anim_when = 1
+metadata/_custom_type_script = "uid://bw7u2deyx1w4l"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/CompendiumButton" to="." method="_on_compendium_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/VBoxContainer/CenterContainer2/VBoxContainer/ResetRunButton" to="." method="_on_reset_run_button_pressed"]

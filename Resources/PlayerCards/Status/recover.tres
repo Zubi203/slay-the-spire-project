@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HealCardData" format=3 uid="uid://dx8a1btjrqsd6"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_ak8n8"]
+[ext_resource type="Script" uid="uid://cg7pioly572o0" path="res://Scripts/heal_card_data.gd" id="1_nsccl"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_7us2x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak8n8"]
+atlas = ExtResource("1_ak8n8")
+region = Rect2(64, 1185, 32, 32)
+
+[resource]
+script = ExtResource("1_nsccl")
+heal_amount = 17
+name = "Recover"
+type = 1
+icon = SubResource("AtlasTexture_ak8n8")
+metadata/_custom_type_script = "uid://cg7pioly572o0"

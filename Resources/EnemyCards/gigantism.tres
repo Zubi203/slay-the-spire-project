@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dota77g2ndrca"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_pk1ri"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_36ksb"]
+[ext_resource type="Resource" uid="uid://dj2i8ed3a8o42" path="res://Resources/Buffs/vital_spirit.tres" id="2_iolej"]
+[ext_resource type="Resource" uid="uid://dfotssyhdegyu" path="res://Resources/Buffs/invigorated.tres" id="3_ti71w"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_1a2be"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8dg8"]
+atlas = ExtResource("4_1a2be")
+region = Rect2(224, 2144, 32, 32)
+
+[resource]
+script = ExtResource("2_36ksb")
+buffs_to_apply = Array[ExtResource("1_pk1ri")]([ExtResource("2_iolej"), ExtResource("3_ti71w")])
+block = 15
+name = "Gigantism"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_l8dg8")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

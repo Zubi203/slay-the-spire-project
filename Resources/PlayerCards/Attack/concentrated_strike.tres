@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MultiModifierAttackCard" format=3 uid="uid://cnc1cx1mh5jwf"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_espod"]
+[ext_resource type="Script" uid="uid://fgq5i2wec184" path="res://Scripts/triple_strength_attack_card.gd" id="1_yy8bt"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_kjx14"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="4_b4t2w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ege6k"]
+atlas = ExtResource("1_espod")
+region = Rect2(480, 2720, 32, 32)
+
+[resource]
+script = ExtResource("1_yy8bt")
+damage = 14
+name = "Concentrated Strike"
+cost = 2
+icon = SubResource("AtlasTexture_ege6k")
+tooltip_statuses = Array[ExtResource("3_kjx14")]([ExtResource("4_b4t2w")])
+metadata/_custom_type_script = "uid://fgq5i2wec184"

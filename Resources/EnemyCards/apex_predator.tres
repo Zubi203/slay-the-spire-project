@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://bphd2dr41b6ie"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_ibs7q"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="2_5iqhw"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_j1h4c"]
+[ext_resource type="Resource" uid="uid://dhmufky11e4kr" path="res://Resources/Buffs/ferocity.tres" id="3_idj6c"]
+[ext_resource type="Resource" uid="uid://o87eqijfoigv" path="res://Resources/Buffs/anger_point.tres" id="4_4ettf"]
+[ext_resource type="Resource" uid="uid://b8ukl1cue1hlx" path="res://Resources/Buffs/Resilience.tres" id="5_kb3ty"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="6_c0o1i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_454b0"]
+atlas = ExtResource("6_c0o1i")
+region = Rect2(320, 2336, 32, 32)
+
+[resource]
+script = ExtResource("2_j1h4c")
+buffs_to_apply = Array[ExtResource("1_ibs7q")]([ExtResource("2_5iqhw"), ExtResource("3_idj6c"), ExtResource("4_4ettf"), ExtResource("5_kb3ty")])
+name = "Apex Predator"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_454b0")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

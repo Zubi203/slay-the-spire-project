@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://bvnkl5ik5du1h"]
+
+[ext_resource type="Script" uid="uid://bgwp8mona37fh" path="res://Scripts/map_button.gd" id="1_d2bk3"]
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_xjfud"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="2_66gvg"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_okpme"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="5_ab810"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab810"]
+atlas = ExtResource("4_okpme")
+region = Rect2(480, 1696, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcbxq"]
+atlas = ExtResource("4_okpme")
+region = Rect2(416, 1696, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ald23"]
+atlas = ExtResource("4_okpme")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws4n1"]
+atlas = ExtResource("4_okpme")
+region = Rect2(64, 1312, 32, 32)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjfud"]
+bg_color = Color(0.10980392, 0.12156863, 0.26666668, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.08627451, 0.09411765, 0.16470589, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66gvg"]
+bg_color = Color(0.10980392, 0.12156863, 0.26666668, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2bk3"]
+bg_color = Color(0.10980392, 0.12156863, 0.26666668, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okpme"]
+bg_color = Color(0.11070001, 0.12663004, 0.27, 0.47058824)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.08319999, 0.090880014, 0.16, 0.47058824)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab810"]
+bg_color = Color(0.10980392, 0.12156863, 0.26666668, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+shadow_size = 1
+shadow_offset = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2w44"]
+atlas = ExtResource("4_okpme")
+region = Rect2(160, 1, 32, 32)
+
+[sub_resource type="Curve" id="Curve_h2w44"]
+_data = [Vector2(0, 0.92800003), 0.0, 0.0, 0, 0, Vector2(0.40909088, 0.66400003), 0.0, 0.0, 0, 0, Vector2(0.65702474, 0.8534483), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="MapButton" type="Node2D" unique_id=1959290923 node_paths=PackedStringArray("icon", "button", "checkmark")]
+z_index = 5
+script = ExtResource("1_d2bk3")
+icon = NodePath("Button/TextureRect")
+button = NodePath("Button")
+checkmark = NodePath("Checkmark")
+room_icons = Dictionary[int, Texture2D]({
+0: null,
+1: SubResource("AtlasTexture_ab810"),
+2: SubResource("AtlasTexture_pcbxq"),
+3: SubResource("AtlasTexture_ald23"),
+4: SubResource("AtlasTexture_ws4n1")
+})
+room_button_scale_ratios = Dictionary[int, float]({
+0: 0.0,
+1: 2.0,
+2: 1.0,
+3: 1.0,
+4: 1.0
+})
+
+[node name="Button" type="Button" parent="." unique_id=151425642]
+custom_minimum_size = Vector2(25, 25)
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+pivot_offset = Vector2(13, 13)
+theme = ExtResource("1_xjfud")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjfud")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_66gvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2bk3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_okpme")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ab810")
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="Button" unique_id=472435980]
+position = Vector2(7, 7)
+script = ExtResource("2_66gvg")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="TextureRect" type="TextureRect" parent="Button" unique_id=2086564350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = -5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_h2w44")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="Button" unique_id=17308996]
+script = ExtResource("5_ab810")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="Checkmark" type="Node2D" parent="." unique_id=1075464488]
+visible = false
+position = Vector2(-5, 14.000001)
+rotation = -0.109129295
+scale = Vector2(0.7, 0.7)
+
+[node name="Line2D2" type="Line2D" parent="Checkmark" unique_id=799240847]
+points = PackedVector2Array(2, -26, 4, -23, 7, -18, 12, -25, 16, -29, 22, -33)
+width = 11.0
+width_curve = SubResource("Curve_h2w44")
+default_color = Color(0, 0, 0, 1)
+begin_cap_mode = 1
+end_cap_mode = 1
+
+[node name="Line2D" type="Line2D" parent="Checkmark" unique_id=1455461364]
+points = PackedVector2Array(2, -26, 4, -23, 7, -18, 10, -23, 15, -28, 22, -33)
+width = 8.0
+width_curve = SubResource("Curve_h2w44")
+default_color = Color(0.1226666, 1, 0.060000002, 1)
+begin_cap_mode = 1
+end_cap_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

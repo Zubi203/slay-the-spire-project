@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://os5fhlwjbmqn"]
+
+[ext_resource type="Texture2D" uid="uid://dut6vxnt5im05" path="res://icon.svg" id="1_3tm23"]
+[ext_resource type="Script" uid="uid://u0206rfinxks" path="res://Scripts/checkpoint_button.gd" id="1_d14vo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2w44"]
+radius = 91.411156
+
+[node name="CheckpointButton" type="Area2D" unique_id=1896656838]
+script = ExtResource("1_d14vo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071041185]
+unique_name_in_owner = true
+texture = ExtResource("1_3tm23")
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=947165182]
+shape = SubResource("CircleShape2D_h2w44")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

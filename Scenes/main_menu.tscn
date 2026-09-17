@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://dxcd4ybx5h0e2"]
+
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_28flt"]
+[ext_resource type="Script" uid="uid://chajxfhcep1to" path="res://Scripts/main_menu.gd" id="2_1ehe0"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="2_48xlc"]
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="3_ce3w2"]
+[ext_resource type="PackedScene" uid="uid://drsfr4pr4436l" path="res://Scenes/settings_menu.tscn" id="3_n45e2"]
+[ext_resource type="Texture2D" uid="uid://c3v8l4dwc3mq1" path="res://Graphics/istockphoto-2174162815-612x612.jpg" id="4_opfnp"]
+[ext_resource type="PackedScene" uid="uid://wlo8fxkc6yhc" path="res://Scenes/card_display.tscn" id="4_yhxw7"]
+[ext_resource type="Script" uid="uid://n2nb7gmc7i8h" path="res://Scripts/title_text.gd" id="5_cp0ys"]
+[ext_resource type="Script" uid="uid://dimct1fhrm5my" path="res://Scripts/container_animation.gd" id="8_vr1f0"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="9_trj04"]
+[ext_resource type="Script" uid="uid://knn48rdbl18m" path="res://Scripts/fade_out_color_rect.gd" id="10_16hvj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n45e2"]
+line_spacing = 0.0
+font = ExtResource("3_ce3w2")
+font_size = 140
+font_color = Color(0.96, 0.48480004, 0.09600002, 1)
+outline_size = 80
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 50
+shadow_color = Color(0, 0, 0, 0.42745098)
+shadow_offset = Vector2(20, 30)
+
+[sub_resource type="LabelSettings" id="LabelSettings_opfnp"]
+line_spacing = 0.0
+font = ExtResource("3_ce3w2")
+font_size = 108
+font_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+outline_size = 65
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 50
+shadow_color = Color(0, 0, 0, 0.42745098)
+shadow_offset = Vector2(20, 30)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+line_spacing = 0.0
+font = ExtResource("3_ce3w2")
+font_size = 160
+font_color = Color(0.30333337, 0.7, 0, 1)
+outline_size = 100
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 50
+shadow_color = Color(0, 0, 0, 0.42745098)
+shadow_offset = Vector2(20, 30)
+
+[node name="MainMenu" type="Control" unique_id=281225133]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_28flt")
+script = ExtResource("2_1ehe0")
+settings_scene = ExtResource("3_n45e2")
+card_display_scene = ExtResource("4_yhxw7")
+
+[node name="BG" type="TextureRect" parent="." unique_id=1058708619]
+modulate = Color(0.6715141, 0.67151415, 0.6715141, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_opfnp")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=637979632]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=75980406]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer/CenterContainer" unique_id=1602541707]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/CenterContainer/Control2" unique_id=1900477398]
+custom_minimum_size = Vector2(600, 300)
+anchors_preset = 0
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+pivot_offset = Vector2(300, 150)
+mouse_filter = 2
+script = ExtResource("5_cp0ys")
+
+[node name="DayneLabel" type="Label" parent="VBoxContainer/CenterContainer/Control2/Control" unique_id=2040934697]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 50.0
+offset_right = 449.0
+offset_bottom = 186.0
+rotation = -0.021848397
+text = "Dayne"
+label_settings = SubResource("LabelSettings_n45e2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TheLabel" type="Label" parent="VBoxContainer/CenterContainer/Control2/Control" unique_id=753887872]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 51.0
+offset_right = 707.0
+offset_bottom = 156.0
+rotation = 0.111374125
+text = "The"
+label_settings = SubResource("LabelSettings_opfnp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DinoHunterLabel" type="Label" parent="VBoxContainer/CenterContainer/Control2/Control" unique_id=2032724292]
+layout_mode = 0
+offset_left = -93.0
+offset_top = 173.0
+offset_right = 698.0
+offset_bottom = 333.0
+text = "Dino Hunter"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1494060539]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Padding" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=2000618714]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Padding2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=516609540]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=808006714]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+script = ExtResource("8_vr1f0")
+anim_when = 1
+anim_type = 1
+duration = 0.6
+delay_appear = 2.3
+delay_between_elements = 0.08
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1984644527]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "PLAY"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/PlayButton" unique_id=256339193]
+script = ExtResource("2_48xlc")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer/PlayButton" unique_id=889375847]
+script = ExtResource("9_trj04")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="CompendiumButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1930390609]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "COMPENDIUM"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/CompendiumButton" unique_id=930865639]
+script = ExtResource("2_48xlc")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer/CompendiumButton" unique_id=1739148233]
+script = ExtResource("9_trj04")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1563592497]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/SettingsButton" unique_id=2017290180]
+script = ExtResource("2_48xlc")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer/SettingsButton" unique_id=950485725]
+script = ExtResource("9_trj04")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1320933748]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_type_variation = &"RedButton"
+text = "EXIT"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" unique_id=58092151]
+script = ExtResource("2_48xlc")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" unique_id=1991921038]
+script = ExtResource("9_trj04")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="Padding3" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=151553765]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Padding4" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1295729269]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="FadeOutColorRect" type="ColorRect" parent="." unique_id=1239988401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("10_16hvj")
+fade_out_duration = 0.8
+fade_out_delay = 1.5
+metadata/_custom_type_script = "uid://knn48rdbl18m"
+
+[node name="CardDisplay" parent="." unique_id=612624972 instance=ExtResource("4_yhxw7")]
+layout_mode = 1
+offset_left = 156.0
+offset_top = 1738.0
+offset_right = 156.0
+offset_bottom = 1738.0
+display_on_ready = true
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/CompendiumButton" to="." method="_on_compendium_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

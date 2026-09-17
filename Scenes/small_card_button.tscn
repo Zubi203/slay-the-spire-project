@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://b3smdi2fyx8n7"]
+
+[ext_resource type="Script" uid="uid://csxcugrsybmai" path="res://Scripts/card_button.gd" id="1_4b621"]
+[ext_resource type="Texture2D" uid="uid://8cv4viay6hj4" path="res://Graphics/Card/card.png" id="1_ep1l7"]
+[ext_resource type="PackedScene" uid="uid://chm73tk71hng3" path="res://Scenes/status_tooltip.tscn" id="2_ep1l7"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="4_tqr74"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="4_utsxg"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="5_06a5j"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="6_x8lk3"]
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="7_108fo"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="9_x8lk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2w44"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.654902)
+shadow_size = 10
+shadow_offset = Vector2(5, 5)
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_i5xsn"]
+line_spacing = 0.0
+font = ExtResource("4_tqr74")
+font_size = 24
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mq1ff"]
+line_spacing = 0.0
+font = ExtResource("5_06a5j")
+font_size = 12
+outline_size = 6
+outline_color = Color(0.28662044, 0.1845333, 0.07720364, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.57254905)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqr74"]
+bg_color = Color(0.6431373, 0.41568628, 0.20392157, 1)
+border_width_left = 5
+border_width_top = 5
+border_color = Color(0.33333334, 0.21568628, 0.08627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ru7c"]
+atlas = ExtResource("6_x8lk3")
+region = Rect2(192, 4288, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rb5g2"]
+font = ExtResource("7_108fo")
+font_size = 12
+font_color = Color(0.961919, 0.9419476, 0.7248465, 1)
+outline_size = 3
+outline_color = Color(0.14072439, 0.082036145, 0.019499049, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.21960784)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dh6ax"]
+line_spacing = 0.0
+font = ExtResource("4_tqr74")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0.26613986, 0.226444, 0.11027353, 1)
+
+[node name="CardButton" type="TextureButton" unique_id=1202668107]
+custom_minimum_size = Vector2(220, 220)
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("1_ep1l7")
+stretch_mode = 5
+script = ExtResource("1_4b621")
+tooltip_scene = ExtResource("2_ep1l7")
+metadata/_custom_type_script = "uid://csxcugrsybmai"
+
+[node name="Panel2" type="Panel" parent="." unique_id=1758567719]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = 5.0
+offset_right = -41.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2w44")
+
+[node name="CostLabel" type="Label" parent="." unique_id=1429733673]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45681825
+anchor_top = 0.051590938
+anchor_right = 0.53015155
+anchor_bottom = 0.18492424
+offset_left = -5.5000153
+offset_top = -5.350006
+offset_right = 5.4999847
+offset_bottom = 5.3166656
+grow_horizontal = 2
+text = "3"
+label_settings = SubResource("LabelSettings_i5xsn")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="Label" parent="." unique_id=978586471]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26666668
+anchor_top = 0.34444445
+anchor_right = 0.73333335
+anchor_bottom = 0.44444445
+offset_left = -19.666668
+offset_top = -28.777779
+offset_right = 18.333328
+offset_bottom = -8.111107
+grow_horizontal = 2
+text = "Furious Retaliation"
+label_settings = SubResource("LabelSettings_mq1ff")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=36611993]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41948056
+anchor_top = 0.44545454
+anchor_right = 0.56666666
+anchor_bottom = 0.5954546
+offset_left = -8.333328
+offset_top = -4.0
+offset_right = 8.333328
+offset_bottom = 10.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tqr74")
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="." unique_id=884120940]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4595238
+anchor_top = 0.5031746
+anchor_right = 0.5404762
+anchor_bottom = 0.5501587
+offset_left = -13.095238
+offset_top = -9.69841
+offset_right = 11.095238
+offset_bottom = 14.69841
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_3ru7c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TypeLabel" type="Label" parent="." unique_id=966365955]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 32.0
+offset_top = 6.0
+offset_right = 98.0
+offset_bottom = 43.0
+text = "POWER"
+label_settings = SubResource("LabelSettings_rb5g2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=818978887]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26666668
+anchor_top = 0.5877778
+anchor_right = 0.73333335
+anchor_bottom = 0.73135805
+offset_left = -10.999996
+offset_top = 14.688889
+offset_right = 11.6666565
+offset_bottom = 46.077774
+grow_horizontal = 2
+text = "Deal 11 damage
+Apply Bleeding"
+label_settings = SubResource("LabelSettings_dh6ax")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="." unique_id=621362997]
+script = ExtResource("4_utsxg")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="." unique_id=1545448840]
+script = ExtResource("9_x8lk3")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"

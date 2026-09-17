@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dtvldx3jodg67"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_4po56"]
+[ext_resource type="Resource" uid="uid://b44vilkvhpjdg" path="res://Resources/Debuffs/weakness.tres" id="2_twqra"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_wiikm"]
+[ext_resource type="Resource" uid="uid://bljqtemp4rt02" path="res://Resources/Debuffs/maimed.tres" id="3_q5jpu"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="4_jxvpq"]
+
+[resource]
+script = ExtResource("2_wiikm")
+debuffs_to_apply = Array[ExtResource("1_4po56")]([ExtResource("2_twqra"), ExtResource("3_q5jpu")])
+damage = 13
+name = "Breaking Swipe"
+cost = 0
+icon = ExtResource("4_jxvpq")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

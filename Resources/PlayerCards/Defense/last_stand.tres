@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LastStandCardData" format=3 uid="uid://coc1550u7j7i1"]
+
+[ext_resource type="Script" uid="uid://cu7gmbdwdrutj" path="res://Scripts/last_stand_card.gd" id="1_me87p"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_wwebi"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_jntcb"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_gs6md"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwebi"]
+atlas = ExtResource("1_wwebi")
+region = Rect2(448, 2336, 32, 32)
+
+[resource]
+script = ExtResource("1_me87p")
+name = "Last Stand"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_wwebi")
+tooltip_statuses = Array[ExtResource("3_jntcb")]([ExtResource("4_gs6md")])
+metadata/_custom_type_script = "uid://cu7gmbdwdrutj"

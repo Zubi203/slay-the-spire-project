@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d4fmp7b14drk8"]
+
+[ext_resource type="PackedScene" uid="uid://chm73tk71hng3" path="res://Scenes/status_tooltip.tscn" id="1_vtysr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtysr"]
+bg_color = Color(0.0765, 0.093641646, 0.17, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4860856, 0.5331459, 0.73317266, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(0, 0, 0, 0.46666667)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+anti_aliasing = false
+
+[node name="SmallStatusTooltip" unique_id=1493776150 instance=ExtResource("1_vtysr")]
+z_index = 999
+custom_minimum_size = Vector2(0, 27)
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtysr")
+
+[node name="MarginContainer" parent="." index="0" unique_id=86257610]
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="HBoxContainer" parent="MarginContainer" index="0" unique_id=1428026594]
+theme_override_constants/separation = 1
+
+[node name="Icon" parent="MarginContainer/HBoxContainer" index="0" unique_id=1813597500]
+custom_minimum_size = Vector2(8, 0)
+
+[node name="StatusTooltipText" parent="MarginContainer/HBoxContainer" index="1" unique_id=860510433]
+theme_override_font_sizes/normal_font_size = 3
+theme_override_font_sizes/bold_font_size = 4
+theme_override_font_sizes/bold_italics_font_size = 3
+theme_override_font_sizes/italics_font_size = 3
+theme_override_font_sizes/mono_font_size = 3
+
+[node name="AutoAnimateUIComponent" parent="." index="1" unique_id=2006906027 node_paths=PackedStringArray("target")]
+target = NodePath("..")
+anim_when = 1
+scale_from = 0
+duration = 0.1

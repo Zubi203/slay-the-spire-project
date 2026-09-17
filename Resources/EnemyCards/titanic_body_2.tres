@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://bxcga1btn4ntd"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_gt0k1"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_oh143"]
+[ext_resource type="Resource" uid="uid://cm0uj1usymxdl" path="res://Resources/Buffs/endure.tres" id="2_s0w4p"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_dy1yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0w4p"]
+atlas = ExtResource("3_dy1yu")
+region = Rect2(128, 4288, 32, 32)
+
+[resource]
+script = ExtResource("2_oh143")
+buffs_to_apply = Array[ExtResource("1_gt0k1")]([ExtResource("2_s0w4p")])
+block = 40
+name = "Titanic Body"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_s0w4p")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

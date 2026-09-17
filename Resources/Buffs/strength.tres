@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://cv37p2jeibifj"]
+
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="1_rs5ea"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_xlm6r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlm6r"]
+atlas = ExtResource("1_xlm6r")
+region = Rect2(288, 2176, 32, 32)
+
+[resource]
+script = ExtResource("1_rs5ea")
+intensity = 3
+stat_to_modify = 2
+name = "Strength"
+icon = SubResource("AtlasTexture_xlm6r")
+stackable = true
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

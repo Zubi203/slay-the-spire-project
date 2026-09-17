@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://bk8volndw3ygq"]
+
+[ext_resource type="Script" uid="uid://d3kw53ckt3fvl" path="res://Scripts/card_node.gd" id="1_e6po8"]
+[ext_resource type="Texture2D" uid="uid://8cv4viay6hj4" path="res://Graphics/Card/card.png" id="1_wf8id"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="2_brehn"]
+[ext_resource type="AudioStream" uid="uid://bpd1uytmllrbv" path="res://Audio/card_hover.ogg" id="2_u5wvb"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="3_brehn"]
+[ext_resource type="AudioStream" uid="uid://cy0dbol3j4cvc" path="res://Audio/card_drag.ogg" id="3_mm04k"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_eumee"]
+[ext_resource type="PackedScene" uid="uid://dorhmrbkfn6tr" path="res://Scenes/cast_particles.tscn" id="4_mm04k"]
+[ext_resource type="PackedScene" uid="uid://d4fmp7b14drk8" path="res://Scenes/small_status_tooltip.tscn" id="5_yvxpl"]
+[ext_resource type="FontFile" uid="uid://5ouibrdnk581" path="res://Graphics/UI/Font/JungleAdventurer.ttf" id="8_u5wvb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2w44"]
+size = Vector2(42, 85.75)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("2_brehn")
+font_size = 8
+outline_size = 2
+outline_color = Color(0.085492186, 0.16089514, 0.46338725, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eumee"]
+line_spacing = 0.0
+font = ExtResource("3_brehn")
+font_size = 4
+outline_size = 2
+outline_color = Color(0.20646363, 0.12646517, 0.043603323, 1)
+shadow_color = Color(0, 0, 0, 0.56078434)
+shadow_offset = Vector2(0.5, 0.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_65ton"]
+font = ExtResource("8_u5wvb")
+font_size = 3
+font_color = Color(0.961919, 0.9419476, 0.7248465, 1)
+outline_size = 1
+outline_color = Color(0.14072439, 0.082036145, 0.019499049, 1)
+shadow_color = Color(0, 0, 0, 0.21960784)
+shadow_offset = Vector2(0.3, 0.3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2w44"]
+bg_color = Color(0.6431373, 0.41568628, 0.20392157, 1)
+border_width_left = 1
+border_width_top = 1
+border_color = Color(0.33333334, 0.21568628, 0.08627451, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2w44"]
+atlas = ExtResource("4_eumee")
+region = Rect2(192, 4288, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6po8"]
+line_spacing = 0.0
+font = ExtResource("3_brehn")
+font_size = 3
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0.6803821, 0.60315514, 0.3357482, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.40784314)
+shadow_offset = Vector2(0.2, 0.2)
+
+[node name="Card" type="Area2D" unique_id=778589649]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_e6po8")
+hover_sound = ExtResource("2_u5wvb")
+drag_sound = ExtResource("3_mm04k")
+draw_sound = ExtResource("3_mm04k")
+cast_particles = ExtResource("4_mm04k")
+tooltip_scene = ExtResource("5_yvxpl")
+tooltip_delay = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=311175458]
+position = Vector2(0, 10.874996)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_h2w44")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1605460404]
+texture = ExtResource("1_wf8id")
+
+[node name="CostLabel" type="Label" parent="." unique_id=932013517]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -6.0
+offset_top = -30.0
+offset_right = 5.0
+offset_bottom = -19.333332
+grow_horizontal = 2
+text = "3"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="." unique_id=1257138090]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -19.166666
+offset_top = -17.5
+offset_right = 19.166666
+offset_bottom = -12.166666
+grow_horizontal = 2
+text = "Storm of Swords"
+label_settings = SubResource("LabelSettings_eumee")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TypeLabel" type="Label" parent="." unique_id=1706190978]
+unique_name_in_owner = true
+offset_left = -23.333332
+offset_top = -28.333332
+offset_right = -3.333332
+offset_bottom = -22.5
+text = "- POWER - "
+label_settings = SubResource("LabelSettings_65ton")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=689043862]
+offset_left = -8.333333
+offset_top = -5.0
+offset_right = 8.333333
+offset_bottom = 10.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2w44")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=442070830]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.333333
+offset_top = -3.3333333
+offset_right = 7.666667
+offset_bottom = 8.166667
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_h2w44")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=1217518034]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(38, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -19.000002
+offset_top = 10.0
+offset_right = 18.999998
+offset_bottom = 30.000004
+grow_horizontal = 2
+text = "Deal 11 damage
+Apply Bleeding
+"
+label_settings = SubResource("LabelSettings_e6po8")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TooltipContainer" type="VBoxContainer" parent="." unique_id=2001711289]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 27)
+offset_left = -33.333332
+offset_top = -184.16666
+offset_right = 31.666668
+offset_bottom = -33.333344
+mouse_filter = 2
+alignment = 2

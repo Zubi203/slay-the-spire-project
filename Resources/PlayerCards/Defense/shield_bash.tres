@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://da3mabn3cd6t1"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_cpunp"]
+[ext_resource type="Resource" uid="uid://dql3lomdep371" path="res://Resources/Buffs/dexterity.tres" id="2_eia2r"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_fupwn"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_vm0ym"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="5_vm0ym"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eia2r"]
+atlas = ExtResource("3_vm0ym")
+region = Rect2(288, 2496, 32, 32)
+
+[resource]
+script = ExtResource("2_fupwn")
+buffs_to_apply = Array[ExtResource("1_cpunp")]([ExtResource("2_eia2r")])
+damage = 8
+name = "Shield Bash"
+icon = SubResource("AtlasTexture_eia2r")
+tooltip_statuses = Array[ExtResource("1_cpunp")]([ExtResource("5_vm0ym")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

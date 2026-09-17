@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dctnujgk0wfby"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_sgiqe"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_pnu3c"]
+[ext_resource type="Resource" uid="uid://dhmufky11e4kr" path="res://Resources/Buffs/ferocity.tres" id="2_wn68q"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_stldv"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="5_stldv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn68q"]
+atlas = ExtResource("3_stldv")
+region = Rect2(352, 2336, 32, 32)
+
+[resource]
+script = ExtResource("2_pnu3c")
+buffs_to_apply = Array[ExtResource("1_sgiqe")]([ExtResource("2_wn68q")])
+block = 18
+name = "War Cry"
+type = 1
+cost = 2
+icon = SubResource("AtlasTexture_wn68q")
+tooltip_statuses = Array[ExtResource("1_sgiqe")]([ExtResource("5_stldv")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

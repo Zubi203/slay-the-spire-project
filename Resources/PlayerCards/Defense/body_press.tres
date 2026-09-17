@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DamageFromBlockCardData" format=3 uid="uid://ba73ife8wv276"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_i1wj4"]
+[ext_resource type="Script" uid="uid://cu83o4sm5e202" path="res://Scripts/damage_from_block_card.gd" id="1_vgo6i"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_yro7i"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_cdhtq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1wj4"]
+atlas = ExtResource("1_i1wj4")
+region = Rect2(96, 2240, 32, 32)
+
+[resource]
+script = ExtResource("1_vgo6i")
+name = "Body Press"
+icon = SubResource("AtlasTexture_i1wj4")
+tooltip_statuses = Array[ExtResource("3_yro7i")]([ExtResource("4_cdhtq")])
+metadata/_custom_type_script = "uid://cu83o4sm5e202"

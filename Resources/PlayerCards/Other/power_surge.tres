@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MultiplyEnergyCardData" format=3 uid="uid://cce65k6t5tysb"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_2ntx5"]
+[ext_resource type="Script" uid="uid://du7mnxkukhmrq" path="res://Scripts/double_energy_card_data.gd" id="1_l7qli"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_hotls"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7qli"]
+atlas = ExtResource("1_2ntx5")
+region = Rect2(384, 2144, 32, 32)
+
+[resource]
+script = ExtResource("1_l7qli")
+name = "Power Surge"
+type = 1
+cost = 2
+icon = SubResource("AtlasTexture_l7qli")
+special_description = "Doubles your Energy."
+metadata/_custom_type_script = "uid://du7mnxkukhmrq"

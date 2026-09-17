@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bjff3lkqynf1n"]
+
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="1_j6042"]
+[ext_resource type="Script" uid="uid://ckrfhxh0hmaqv" path="res://Scripts/move_text_effect.gd" id="2_w7t0e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("1_j6042")
+font_size = 12
+font_color = Color(0.88, 1, 0.982, 1)
+outline_size = 8
+outline_color = Color(0, 0.12, 0.112, 1)
+
+[node name="MoveTextEffect" type="Label" unique_id=1496876457]
+z_index = 99
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Prehistoric Might"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_w7t0e")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://ccoe2ydfshhn2"]
+
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_77g3t"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_u87ov"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_q11rb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u87ov"]
+atlas = ExtResource("1_u87ov")
+region = Rect2(96, 3328, 32, 32)
+
+[resource]
+script = ExtResource("1_77g3t")
+damage = 8
+name = "Slash"
+icon = SubResource("AtlasTexture_u87ov")
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

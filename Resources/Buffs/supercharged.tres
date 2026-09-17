@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EffectOverTimeStatus" format=3 uid="uid://d3xkdev3xb85j"]
+
+[ext_resource type="Script" uid="uid://d1q1xykusm0y7" path="res://Scripts/effect_over_time_status.gd" id="1_7nu73"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_jrvx7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrvx7"]
+atlas = ExtResource("1_jrvx7")
+region = Rect2(480, 2592, 32, 32)
+
+[resource]
+script = ExtResource("1_7nu73")
+effect_type = 3
+stat_gain = 1
+name = "Supercharged"
+base_duration = 4
+icon = SubResource("AtlasTexture_jrvx7")
+stackable = true
+metadata/_custom_type_script = "uid://d1q1xykusm0y7"

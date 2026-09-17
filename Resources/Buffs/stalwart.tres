@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://dcibub4ibxrrr"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_a3hq6"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_yym13"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yym13"]
+atlas = ExtResource("1_yym13")
+region = Rect2(0, 3775, 32, 32)
+
+[resource]
+script = ExtResource("1_a3hq6")
+multiplier = 1.3
+name = "Stalwart"
+icon = SubResource("AtlasTexture_yym13")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

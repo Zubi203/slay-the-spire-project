@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://b84ugpndyfmfy"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_b24dr"]
+[ext_resource type="SpriteFrames" uid="uid://bptwpi3vq8tli" path="res://Resources/SpriteFrames/nodosaurus.tres" id="1_vbr34"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_5e5pn"]
+[ext_resource type="Resource" uid="uid://bwscnt7m8366u" path="res://Resources/EnemyCards/impenetrable_hide.tres" id="3_cwxyf"]
+[ext_resource type="Resource" uid="uid://bbp74a37m7wy0" path="res://Resources/EnemyCards/head_bash.tres" id="3_vbr34"]
+[ext_resource type="Resource" uid="uid://dtvldx3jodg67" path="res://Resources/EnemyCards/breaking_swipe.tres" id="4_g8njt"]
+[ext_resource type="Resource" uid="uid://4sdte78delw4" path="res://Resources/EnemyCards/tail_club.tres" id="5_qn6h3"]
+[ext_resource type="Resource" uid="uid://cp7xy6jwhgfhi" path="res://Resources/EnemyCards/hearty_recovery.tres" id="7_4uu3r"]
+[ext_resource type="AudioStream" uid="uid://c4wsccgsyk6gk" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoQuickLoudRoar.wav" id="8_g8njt"]
+
+[resource]
+script = ExtResource("2_5e5pn")
+name = "Nodosaurus"
+max_health = 150
+flip_sprite = true
+animation_sprites = ExtResource("1_vbr34")
+base_deck = Array[ExtResource("1_b24dr")]([ExtResource("3_cwxyf"), ExtResource("4_g8njt"), ExtResource("5_qn6h3"), ExtResource("3_vbr34"), ExtResource("3_vbr34"), ExtResource("3_cwxyf"), ExtResource("3_vbr34"), ExtResource("4_g8njt"), ExtResource("7_4uu3r"), ExtResource("5_qn6h3"), ExtResource("3_cwxyf"), ExtResource("4_g8njt"), ExtResource("5_qn6h3"), ExtResource("3_vbr34"), ExtResource("7_4uu3r")])
+death_sound = ExtResource("8_g8njt")
+display_entry_text = true
+entry_text = "A Nodosaur"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

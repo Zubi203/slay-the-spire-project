@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MultiHitAttack" format=3 uid="uid://bi1derw10q7ys"]
+
+[ext_resource type="Script" uid="uid://beb4seujy8aid" path="res://Scripts/multi_hit_attack.gd" id="1_qgsgd"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_r1p85"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_njxld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8clha"]
+atlas = ExtResource("1_r1p85")
+region = Rect2(480, 2240, 32, 32)
+
+[resource]
+script = ExtResource("1_qgsgd")
+number_of_hits = 3
+damage = 4
+name = "Volley"
+cost = 2
+icon = SubResource("AtlasTexture_8clha")
+metadata/_custom_type_script = "uid://beb4seujy8aid"

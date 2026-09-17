@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://ppbhwv1o1qus"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_mnm8x"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_1wdmf"]
+[ext_resource type="Resource" uid="uid://dcibub4ibxrrr" path="res://Resources/Buffs/stalwart.tres" id="2_a7oqx"]
+[ext_resource type="Resource" uid="uid://dql3lomdep371" path="res://Resources/Buffs/dexterity.tres" id="3_1aqro"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_huiix"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="5_huiix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7oqx"]
+atlas = ExtResource("3_huiix")
+region = Rect2(447, 2592, 32, 32)
+
+[resource]
+script = ExtResource("2_1wdmf")
+buffs_to_apply = Array[ExtResource("1_mnm8x")]([ExtResource("2_a7oqx"), ExtResource("3_1aqro")])
+heal = 10
+name = "Unbreakable Resolve"
+type = 1
+icon = SubResource("AtlasTexture_a7oqx")
+tooltip_statuses = Array[ExtResource("1_mnm8x")]([ExtResource("5_huiix")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

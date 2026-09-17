@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BuffOnDamageTakenStatus" format=3 uid="uid://o87eqijfoigv"]
+
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="1_bqunx"]
+[ext_resource type="Script" uid="uid://dx1oj73yr5xmt" path="res://Scripts/buff_on_damage_taken_status.gd" id="1_ixldo"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_ftd24"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk10s"]
+atlas = ExtResource("2_ftd24")
+region = Rect2(320, 1472, 32, 32)
+
+[resource]
+script = ExtResource("1_ixldo")
+buff_to_apply = ExtResource("1_bqunx")
+name = "Anger Point"
+base_duration = 2
+icon = SubResource("AtlasTexture_yk10s")
+metadata/_custom_type_script = "uid://dx1oj73yr5xmt"

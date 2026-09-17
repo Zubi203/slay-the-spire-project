@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://da77pxjuc5htu"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_4ecq3"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_n1hh3"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_sb33c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb33c"]
+atlas = ExtResource("2_sb33c")
+region = Rect2(224, 2112, 32, 32)
+
+[resource]
+script = ExtResource("2_n1hh3")
+self_damage = 3
+energy_gain = 1
+name = "Bloodletting"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_sb33c")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

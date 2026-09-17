@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://cbg2nr1uexjg1"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_erjcm"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_3mk0i"]
+[ext_resource type="Resource" uid="uid://b44vilkvhpjdg" path="res://Resources/Debuffs/weakness.tres" id="2_4ur5x"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_0cf16"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ur5x"]
+atlas = ExtResource("3_0cf16")
+region = Rect2(160, 2528, 32, 32)
+
+[resource]
+script = ExtResource("2_3mk0i")
+debuffs_to_apply = Array[ExtResource("1_erjcm")]([ExtResource("2_4ur5x")])
+damage = 8
+name = "Heavy Blow"
+icon = SubResource("AtlasTexture_4ur5x")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

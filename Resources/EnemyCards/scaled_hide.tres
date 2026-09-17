@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BlockCardData" format=3 uid="uid://c1s4u2nk8syw7"]
+
+[ext_resource type="Script" uid="uid://diqa2f1w0c2ew" path="res://Scripts/block_card_data.gd" id="1_k6c38"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_rv4rl"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_xbt3c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv4rl"]
+atlas = ExtResource("1_rv4rl")
+region = Rect2(128, 4288, 32, 32)
+
+[resource]
+script = ExtResource("1_k6c38")
+block_amount = 13
+name = "Scaly Hide"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_rv4rl")
+metadata/_custom_type_script = "uid://diqa2f1w0c2ew"

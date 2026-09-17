@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://bid1dddnyw0o6"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_2a0kq"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_6pwmc"]
+[ext_resource type="Resource" uid="uid://o87eqijfoigv" path="res://Resources/Buffs/anger_point.tres" id="2_kwsj6"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_kwsj6"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="5_dng75"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="6_jnjv6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dng75"]
+atlas = ExtResource("3_kwsj6")
+region = Rect2(64, 2432, 32, 32)
+
+[resource]
+script = ExtResource("2_6pwmc")
+buffs_to_apply = Array[ExtResource("1_2a0kq")]([ExtResource("2_kwsj6")])
+block = 5
+name = "Furious Retaliation"
+type = 1
+icon = SubResource("AtlasTexture_dng75")
+tooltip_statuses = Array[ExtResource("1_2a0kq")]([ExtResource("5_dng75"), ExtResource("6_jnjv6")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

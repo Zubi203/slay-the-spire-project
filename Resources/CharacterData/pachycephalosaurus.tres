@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://rt2aegtbgru4"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_3lvk7"]
+[ext_resource type="SpriteFrames" uid="uid://cdt5l8bkygpks" path="res://Resources/SpriteFrames/pachycephalosaurus.tres" id="1_l23ev"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_xtidr"]
+[ext_resource type="Resource" uid="uid://bbp74a37m7wy0" path="res://Resources/EnemyCards/head_bash.tres" id="3_l23ev"]
+[ext_resource type="Resource" uid="uid://c1s4u2nk8syw7" path="res://Resources/EnemyCards/scaled_hide.tres" id="4_3ipqq"]
+[ext_resource type="Resource" uid="uid://c5tkbl5j8dehn" path="res://Resources/EnemyCards/tail_swipe.tres" id="5_bsyfe"]
+[ext_resource type="AudioStream" uid="uid://d1c5vpyeuam40" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoGrowl.wav" id="6_bsyfe"]
+
+[resource]
+script = ExtResource("2_xtidr")
+name = "Pachycephalosaurus"
+max_health = 80
+flip_sprite = true
+animation_sprites = ExtResource("1_l23ev")
+base_deck = Array[ExtResource("1_3lvk7")]([ExtResource("3_l23ev"), ExtResource("4_3ipqq"), ExtResource("5_bsyfe"), ExtResource("3_l23ev"), ExtResource("4_3ipqq")])
+death_sound = ExtResource("6_bsyfe")
+display_entry_text = true
+entry_text = "A Small Ornithopod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

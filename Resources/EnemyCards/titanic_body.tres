@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BlockCardData" format=3 uid="uid://bwee6buxjwtav"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_6bmvm"]
+[ext_resource type="Script" uid="uid://diqa2f1w0c2ew" path="res://Scripts/block_card_data.gd" id="1_tsfw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bmvm"]
+atlas = ExtResource("1_6bmvm")
+region = Rect2(128, 4288, 32, 32)
+
+[resource]
+script = ExtResource("1_tsfw2")
+block_amount = 40
+name = "Titanic Body"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_6bmvm")
+metadata/_custom_type_script = "uid://diqa2f1w0c2ew"

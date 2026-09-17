@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EffectOverTimeStatus" format=3 uid="uid://dhe70ajd7bd8x"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_adf1i"]
+[ext_resource type="Script" uid="uid://d1q1xykusm0y7" path="res://Scripts/effect_over_time_status.gd" id="1_vithy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adf1i"]
+atlas = ExtResource("1_adf1i")
+region = Rect2(161, 1472, 32, 32)
+
+[resource]
+script = ExtResource("1_vithy")
+stat_gain = 5
+trigger_on = 1
+buff_type = 1
+name = "Bleeding"
+icon = SubResource("AtlasTexture_adf1i")
+stackable = true
+metadata/_custom_type_script = "uid://d1q1xykusm0y7"

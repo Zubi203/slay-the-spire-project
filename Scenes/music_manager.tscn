@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://djcqnsyvhqwpv"]
+
+[ext_resource type="Script" uid="uid://c2xbt8v1i882c" path="res://Scripts/music_manager.gd" id="1_a0g8o"]
+[ext_resource type="AudioStream" uid="uid://b4ynpkrk56co1" path="res://Audio/PrehistoricSoundPack/Music/the_mountain-jungle-documentary-133236.mp3" id="2_m1xhr"]
+[ext_resource type="AudioStream" uid="uid://bw72tdaiwwawo" path="res://Audio/PrehistoricSoundPack/Music/BonyVillage.wav" id="2_sdmu8"]
+[ext_resource type="AudioStream" uid="uid://cce8lbi78g853" path="res://Audio/PrehistoricSoundPack/Music/ExploringPangaea.wav" id="3_b40f5"]
+[ext_resource type="AudioStream" uid="uid://b6hn6eto0db8d" path="res://Audio/PrehistoricSoundPack/Music/EncounteringTheBeasts.wav" id="4_a0g8o"]
+[ext_resource type="AudioStream" uid="uid://bfuvujkx6kc48" path="res://Audio/PrehistoricSoundPack/Music/SuccessTheme.wav" id="6_m1xhr"]
+[ext_resource type="AudioStream" uid="uid://4uw0vj1tc8y4" path="res://Audio/PrehistoricSoundPack/Music/DefeatTheme.wav" id="7_gup21"]
+
+[node name="MusicManager" type="Node" unique_id=498910763 node_paths=PackedStringArray("tracks")]
+script = ExtResource("1_a0g8o")
+tracks = {
+0: NodePath("TitleMusic"),
+1: NodePath("MapMusic"),
+2: NodePath("CombatMusic"),
+3: NodePath("BossMusic"),
+4: NodePath("VictoryMusic"),
+5: NodePath("DefeatMusic")
+}
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="." unique_id=1727791285]
+stream = ExtResource("2_m1xhr")
+bus = &"Music"
+
+[node name="MapMusic" type="AudioStreamPlayer" parent="." unique_id=372906070]
+stream = ExtResource("2_sdmu8")
+bus = &"Music"
+
+[node name="CombatMusic" type="AudioStreamPlayer" parent="." unique_id=997676574]
+stream = ExtResource("3_b40f5")
+bus = &"Music"
+
+[node name="BossMusic" type="AudioStreamPlayer" parent="." unique_id=1826374827]
+stream = ExtResource("4_a0g8o")
+bus = &"Music"
+
+[node name="VictoryMusic" type="AudioStreamPlayer" parent="." unique_id=871066545]
+stream = ExtResource("6_m1xhr")
+bus = &"Music"
+
+[node name="DefeatMusic" type="AudioStreamPlayer" parent="." unique_id=1288654794]
+stream = ExtResource("7_gup21")
+bus = &"Music"

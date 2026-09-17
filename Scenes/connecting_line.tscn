@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dkm2qt0hs3mxg"]
+
+[ext_resource type="Texture2D" uid="uid://cibn888jyqlp6" path="res://Graphics/dotted_line.png" id="1_dpg08"]
+
+[node name="ConnectingLine" type="Line2D" unique_id=424412409]
+modulate = Color(0.6682164, 0.6682166, 0.66821617, 1)
+texture_repeat = 2
+width = 3.0
+texture = ExtResource("1_dpg08")
+texture_mode = 1
+sharp_limit = 0.0

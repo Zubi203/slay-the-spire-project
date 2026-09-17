@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DrawAndEnergyPerBuffCardData" format=3 uid="uid://cnppxpofkbaeu"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_ve0lc"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_rjo3u"]
+[ext_resource type="Script" uid="uid://do1lnjl7fhcqq" path="res://Scripts/draw_and_energy_per_card.gd" id="2_s1lyh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjo3u"]
+atlas = ExtResource("2_rjo3u")
+region = Rect2(192, 2688, 32, 32)
+
+[resource]
+script = ExtResource("2_s1lyh")
+cards_to_draw = 1
+energy_gain = 1
+name = "Limit Break"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_rjo3u")
+metadata/_custom_type_script = "uid://do1lnjl7fhcqq"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c4p8f0aaede5o"]
+
+[ext_resource type="SpriteFrames" uid="uid://pti38pne1axe" path="res://Resources/SpriteFrames/centrosaurus.tres" id="1_425wt"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_btn0d"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_fryh1"]
+[ext_resource type="Resource" uid="uid://c1s4u2nk8syw7" path="res://Resources/EnemyCards/scaled_hide.tres" id="2_gtnfu"]
+[ext_resource type="Resource" uid="uid://b8hy5665xebcy" path="res://Resources/EnemyCards/skull_armor.tres" id="3_gtnfu"]
+[ext_resource type="Resource" uid="uid://c5tkbl5j8dehn" path="res://Resources/EnemyCards/tail_swipe.tres" id="4_425wt"]
+[ext_resource type="AudioStream" uid="uid://d1c5vpyeuam40" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoGrowl.wav" id="6_425wt"]
+
+[resource]
+script = ExtResource("2_fryh1")
+name = "Centrosaurus"
+max_health = 100
+flip_sprite = true
+animation_sprites = ExtResource("1_425wt")
+base_deck = Array[ExtResource("1_btn0d")]([ExtResource("3_gtnfu"), ExtResource("4_425wt"), ExtResource("2_gtnfu"), ExtResource("4_425wt"), ExtResource("2_gtnfu"), ExtResource("3_gtnfu"), ExtResource("4_425wt"), ExtResource("2_gtnfu"), ExtResource("4_425wt")])
+death_sound = ExtResource("6_425wt")
+display_entry_text = true
+entry_text = "A Ceratops"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

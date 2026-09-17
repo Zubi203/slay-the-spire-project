@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://dya7kvh678a4r"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_yrfwu"]
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="2_bhq50"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuwgd"]
+atlas = ExtResource("1_yrfwu")
+region = Rect2(64, 1216, 32, 32)
+
+[resource]
+script = ExtResource("2_bhq50")
+intensity = 3
+stat_to_modify = 1
+name = "Vitality"
+icon = SubResource("AtlasTexture_uuwgd")
+stackable = true
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

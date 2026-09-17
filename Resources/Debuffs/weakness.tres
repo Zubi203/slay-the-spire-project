@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="AdditiveModifierStatus" format=3 uid="uid://b44vilkvhpjdg"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_3dpfn"]
+[ext_resource type="Script" uid="uid://bn7x6jpvegnqa" path="res://Scripts/additive_modifier.gd" id="1_jfdc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dpfn"]
+atlas = ExtResource("1_3dpfn")
+region = Rect2(416, 2177, 32, 32)
+
+[resource]
+script = ExtResource("1_jfdc2")
+intensity = -3
+stat_to_modify = 2
+buff_type = 1
+name = "Weakness"
+base_duration = 2
+icon = SubResource("AtlasTexture_3dpfn")
+stackable = true
+metadata/_custom_type_script = "uid://bn7x6jpvegnqa"

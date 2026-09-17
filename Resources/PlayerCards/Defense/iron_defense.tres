@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DoubleBlockCardData" format=3 uid="uid://b3ipeu01sdhms"]
+
+[ext_resource type="Script" uid="uid://ch3y2rmiobxil" path="res://Scripts/double_block_card.gd" id="1_unfrk"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_w5b7o"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_oahl3"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_vo8e6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5b7o"]
+atlas = ExtResource("1_w5b7o")
+region = Rect2(96, 4288, 32, 32)
+
+[resource]
+script = ExtResource("1_unfrk")
+name = "Iron Defense"
+type = 1
+icon = SubResource("AtlasTexture_w5b7o")
+tooltip_statuses = Array[ExtResource("3_oahl3")]([ExtResource("4_vo8e6")])
+metadata/_custom_type_script = "uid://ch3y2rmiobxil"

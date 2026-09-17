@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RetainBlockStatus" format=3 uid="uid://cm0uj1usymxdl"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_n1uf1"]
+[ext_resource type="Script" uid="uid://c1g5h3cobrg1p" path="res://Scripts/retain_block_status.gd" id="1_ua4yk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1uf1"]
+atlas = ExtResource("1_n1uf1")
+region = Rect2(160, 4287, 32, 32)
+
+[resource]
+script = ExtResource("1_ua4yk")
+name = "Endurance"
+icon = SubResource("AtlasTexture_n1uf1")
+metadata/_custom_type_script = "uid://c1g5h3cobrg1p"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://8fprwkn8g3s2"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_xjwx1"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_pgjr2"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_qjn5i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjn5i"]
+atlas = ExtResource("2_qjn5i")
+region = Rect2(192, 2112, 32, 32)
+
+[resource]
+script = ExtResource("2_pgjr2")
+self_damage = 15
+cards_to_draw = 3
+energy_gain = 2
+name = "Blood Sacrifice"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_qjn5i")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

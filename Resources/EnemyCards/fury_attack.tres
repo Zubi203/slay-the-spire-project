@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MultiHitAttack" format=3 uid="uid://betqyo0tpupc3"]
+
+[ext_resource type="Script" uid="uid://beb4seujy8aid" path="res://Scripts/multi_hit_attack.gd" id="1_01ci1"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_xgna0"]
+
+[resource]
+script = ExtResource("1_01ci1")
+number_of_hits = 3
+damage = 7
+name = "Rip and Tear"
+cost = 0
+icon = ExtResource("1_xgna0")
+metadata/_custom_type_script = "uid://beb4seujy8aid"

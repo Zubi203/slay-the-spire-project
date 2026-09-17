@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dnrotks8rjapu"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_sq2ld"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_grqk7"]
+[ext_resource type="Resource" uid="uid://d1emxiiouaxg3" path="res://Resources/Buffs/intangible.tres" id="2_oiyim"]
+[ext_resource type="Resource" uid="uid://dhmufky11e4kr" path="res://Resources/Buffs/ferocity.tres" id="3_s5v6q"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_p8apo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hui2y"]
+atlas = ExtResource("4_p8apo")
+region = Rect2(224, 2144, 32, 32)
+
+[resource]
+script = ExtResource("2_grqk7")
+buffs_to_apply = Array[ExtResource("1_sq2ld")]([ExtResource("2_oiyim"), ExtResource("3_s5v6q")])
+heal = 8
+name = "Submerge"
+type = 3
+cost = 0
+icon = SubResource("AtlasTexture_hui2y")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

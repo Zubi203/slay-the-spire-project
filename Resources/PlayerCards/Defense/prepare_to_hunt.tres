@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://10yeaw50x20t"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_6vgf0"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_k3rn2"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_v3f7m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3rn2"]
+atlas = ExtResource("2_k3rn2")
+region = Rect2(32, 1440, 32, 32)
+
+[resource]
+script = ExtResource("2_v3f7m")
+block = 6
+name = "Prepare to Hunt"
+type = 3
+icon = SubResource("AtlasTexture_k3rn2")
+special_description = "<UNUSED_CARD>"
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

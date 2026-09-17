@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cdpd3dbpsgi83"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_52gw2"]
+[ext_resource type="SpriteFrames" uid="uid://b5q70s4mqu54e" path="res://Resources/SpriteFrames/diplodocus.tres" id="1_at202"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_t20w3"]
+[ext_resource type="Resource" uid="uid://btbye1wpwwiqr" path="res://Resources/EnemyCards/rest.tres" id="3_at202"]
+[ext_resource type="Resource" uid="uid://c1s4u2nk8syw7" path="res://Resources/EnemyCards/scaled_hide.tres" id="4_cr7h7"]
+[ext_resource type="Resource" uid="uid://d0uytlhwuhovi" path="res://Resources/EnemyCards/neck_slam.tres" id="4_jyb26"]
+[ext_resource type="Resource" uid="uid://bi1fhi6hivgdw" path="res://Resources/EnemyCards/stomp.tres" id="5_mhcfv"]
+[ext_resource type="Resource" uid="uid://c5tkbl5j8dehn" path="res://Resources/EnemyCards/tail_swipe.tres" id="7_oi83n"]
+[ext_resource type="Resource" uid="uid://cp7xy6jwhgfhi" path="res://Resources/EnemyCards/hearty_recovery.tres" id="8_ogkie"]
+[ext_resource type="AudioStream" uid="uid://d1c5vpyeuam40" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoGrowl.wav" id="9_mhcfv"]
+
+[resource]
+script = ExtResource("2_t20w3")
+name = "Diplodocus"
+max_health = 110
+flip_sprite = true
+animation_sprites = ExtResource("1_at202")
+base_deck = Array[ExtResource("1_52gw2")]([ExtResource("4_cr7h7"), ExtResource("4_jyb26"), ExtResource("5_mhcfv"), ExtResource("3_at202"), ExtResource("7_oi83n"), ExtResource("5_mhcfv"), ExtResource("4_jyb26"), ExtResource("8_ogkie"), ExtResource("7_oi83n")])
+death_sound = ExtResource("9_mhcfv")
+display_entry_text = true
+entry_text = "A Small Sauropod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

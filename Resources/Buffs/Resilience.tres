@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://b8ukl1cue1hlx"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_6nig3"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_24cyu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24cyu"]
+atlas = ExtResource("1_24cyu")
+region = Rect2(384, 2176, 32, 32)
+
+[resource]
+script = ExtResource("1_6nig3")
+multiplier = 0.75
+stat_to_modify = 3
+expire_on = 1
+name = "Resilience"
+icon = SubResource("AtlasTexture_24cyu")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

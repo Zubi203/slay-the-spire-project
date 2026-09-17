@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c260af3u47nnf"]
+
+[ext_resource type="PackedScene" uid="uid://johkywox4dhh" path="res://Scenes/Characters/character.tscn" id="1_l560e"]
+[ext_resource type="AudioStream" uid="uid://cckxh5kkehbw1" path="res://Audio/player_damaged.ogg" id="2_3pywu"]
+[ext_resource type="AudioStream" uid="uid://bh5us1nlaj5kq" path="res://Audio/PrehistoricSoundPack/SFX_Files/27_sword_miss_1.wav" id="3_3pywu"]
+[ext_resource type="AudioStream" uid="uid://dsqnrsgfur0m0" path="res://Audio/PrehistoricSoundPack/SFX_Files/SwordAttack.wav" id="3_tj02q"]
+[ext_resource type="Shader" uid="uid://4il1vgmlngp6" path="res://Shaders/character.gdshader" id="4_6cvca"]
+
+[sub_resource type="Gradient" id="Gradient_wcbup"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.6792929)
+colors = PackedColorArray(1, 1, 1, 0.5882353, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tj02q"]
+gradient = SubResource("Gradient_wcbup")
+width = 140
+height = 120
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tj02q"]
+resource_local_to_scene = true
+shader = ExtResource("4_6cvca")
+shader_parameter/progress_red = 0.0
+shader_parameter/progress_green = 0.0
+shader_parameter/progress_blue = 0.0
+shader_parameter/progress_yellow = 0.0
+shader_parameter/progress_orange = 0.0
+
+[node name="PlayerCharacter" unique_id=1085597718 instance=ExtResource("1_l560e")]
+damage_sound = ExtResource("2_3pywu")
+block_sound = ExtResource("3_tj02q")
+attack_sound = ExtResource("3_3pywu")
+
+[node name="GlowHighlight" parent="." index="0" unique_id=486116396]
+position = Vector2(2, -25)
+texture = SubResource("GradientTexture2D_tj02q")
+
+[node name="CharacterAnimation" parent="." index="1" unique_id=1711762259]
+material = SubResource("ShaderMaterial_tj02q")

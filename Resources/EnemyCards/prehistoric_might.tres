@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://dlwvm8ewo0km7"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_5t8ot"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_ty4yu"]
+[ext_resource type="Resource" uid="uid://cm0uj1usymxdl" path="res://Resources/Buffs/endure.tres" id="2_wlp1m"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="4_x7kxu"]
+
+[resource]
+script = ExtResource("2_ty4yu")
+buffs_to_apply = Array[ExtResource("1_5t8ot")]([ExtResource("2_wlp1m")])
+damage = 17
+block = 25
+name = "Prehistoric Might"
+cost = 0
+icon = ExtResource("4_x7kxu")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

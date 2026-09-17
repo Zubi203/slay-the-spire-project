@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://cxqpcjpxvoxgy"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_kvoug"]
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_wo6dn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ykj"]
+atlas = ExtResource("1_kvoug")
+region = Rect2(192, 1184, 32, 32)
+
+[resource]
+script = ExtResource("1_wo6dn")
+multiplier = -1.0
+stat_to_modify = 1
+allow_negative = true
+buff_type = 1
+name = "Heartache"
+base_duration = 2
+icon = SubResource("AtlasTexture_n3ykj")
+override_base_description = true
+description = "Healing becomes damage"
+metadata/_custom_type_script = "uid://tdev7j85xi82"

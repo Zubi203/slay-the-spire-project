@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TriggerOnEnemyStatusCardData" format=3 uid="uid://2buc4a2vk2s2"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_rtsov"]
+[ext_resource type="Script" uid="uid://cw3eu6rcvhn6t" path="res://Scripts/trigger_on_enemy_status_card_data.gd" id="2_2xyys"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_u8td0"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="4_flc2j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8td0"]
+atlas = ExtResource("2_u8td0")
+region = Rect2(320, 2304, 32, 32)
+
+[resource]
+script = ExtResource("2_2xyys")
+status_to_search = ExtResource("4_flc2j")
+cards_to_draw = 1
+energy_gain = 2
+name = "Stalker"
+type = 1
+icon = SubResource("AtlasTexture_u8td0")
+tooltip_statuses = Array[ExtResource("1_rtsov")]([ExtResource("4_flc2j")])
+metadata/_custom_type_script = "uid://cw3eu6rcvhn6t"

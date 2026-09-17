@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://b5tmh12il47m4"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_2ccmp"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_2piu3"]
+[ext_resource type="Resource" uid="uid://cmqp2ogu1rmwp" path="res://Resources/Debuffs/vulnerable.tres" id="2_pyoae"]
+[ext_resource type="Resource" uid="uid://c7apv7gji7ed6" path="res://Resources/Debuffs/spirit_break.tres" id="3_0574x"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_rp504"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="6_0574x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4us2"]
+atlas = ExtResource("4_rp504")
+region = Rect2(33, 2208, 32, 32)
+
+[resource]
+script = ExtResource("2_2piu3")
+debuffs_to_apply = Array[ExtResource("1_2ccmp")]([ExtResource("2_pyoae"), ExtResource("3_0574x")])
+damage = 14
+name = "Cripple Prey"
+cost = 2
+icon = SubResource("AtlasTexture_h4us2")
+tooltip_statuses = Array[ExtResource("1_2ccmp")]([ExtResource("6_0574x")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

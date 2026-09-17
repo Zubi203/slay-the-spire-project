@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SelfDamageAttackCardData" format=3 uid="uid://cv8uiek6qefsd"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_52djf"]
+[ext_resource type="Script" uid="uid://vlwpsemjb50g" path="res://Scripts/SelfDamageAttackCardData.gd" id="1_77hvw"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_47hfa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqjuo"]
+atlas = ExtResource("1_52djf")
+region = Rect2(416, 2400, 32, 32)
+
+[resource]
+script = ExtResource("1_77hvw")
+damage = 17
+name = "Burning Blood"
+icon = SubResource("AtlasTexture_tqjuo")
+metadata/_custom_type_script = "uid://vlwpsemjb50g"

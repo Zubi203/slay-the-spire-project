@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b0mfd350gxe0c"]
+
+[ext_resource type="Texture2D" uid="uid://5wubkaghywj1" path="res://Graphics/Dinosaurs.png" id="1_tog42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb16g"]
+atlas = ExtResource("1_tog42")
+region = Rect2(576, 240, 288, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3hia"]
+atlas = ExtResource("1_tog42")
+region = Rect2(576, 240, 288, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thj8r"]
+atlas = ExtResource("1_tog42")
+region = Rect2(576, 240, 288, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kildx"]
+atlas = ExtResource("1_tog42")
+region = Rect2(576, 240, 288, 240)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb16g")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3hia")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thj8r")
+}],
+"loop": 1,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kildx")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]

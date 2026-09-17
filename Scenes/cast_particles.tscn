@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dorhmrbkfn6tr"]
+
+[ext_resource type="Script" uid="uid://cvsb7l6kl11uv" path="res://Scripts/cast_particles.gd" id="1_kowwf"]
+
+[sub_resource type="Gradient" id="Gradient_4ev0d"]
+offsets = PackedFloat32Array(0, 0.5328283, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kowwf"]
+gradient = SubResource("Gradient_4ev0d")
+width = 32
+height = 8
+
+[sub_resource type="Curve" id="Curve_pvc7y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7670455, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.4047637, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_4ev0d"]
+curve = SubResource("Curve_pvc7y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n6fgu"]
+particle_flag_align_y = true
+particle_flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 98, 0)
+damping_min = 600.0
+damping_max = 600.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_4ev0d")
+
+[node name="CastParticles" type="GPUParticles2D" unique_id=616856671]
+emitting = false
+amount = 50
+texture = SubResource("GradientTexture2D_kowwf")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_n6fgu")
+script = ExtResource("1_kowwf")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

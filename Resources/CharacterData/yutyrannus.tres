@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://xlrnr8xgvu2w"]
+
+[ext_resource type="SpriteFrames" uid="uid://cg6t7yfr244ch" path="res://Resources/SpriteFrames/yutyrannus.tres" id="1_04g63"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="2_bq24c"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_ylvii"]
+[ext_resource type="Resource" uid="uid://b5sb1440177sx" path="res://Resources/EnemyCards/roar.tres" id="3_et3gn"]
+[ext_resource type="Resource" uid="uid://rxe02qscnf17" path="res://Resources/EnemyCards/bite.tres" id="3_pp57h"]
+[ext_resource type="Resource" uid="uid://betqyo0tpupc3" path="res://Resources/EnemyCards/fury_attack.tres" id="4_pp57h"]
+[ext_resource type="AudioStream" uid="uid://v33awthq1ke6" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoSoftGrunt.wav" id="6_bq24c"]
+
+[resource]
+script = ExtResource("2_ylvii")
+name = "Yutyrannus"
+max_health = 50
+animation_sprites = ExtResource("1_04g63")
+sprite_scale_multiplier = 0.8
+base_deck = Array[ExtResource("2_bq24c")]([ExtResource("3_et3gn"), ExtResource("3_pp57h"), ExtResource("4_pp57h"), ExtResource("3_pp57h"), ExtResource("3_et3gn"), ExtResource("4_pp57h"), ExtResource("3_pp57h"), ExtResource("4_pp57h")])
+death_sound = ExtResource("6_bq24c")
+display_entry_text = true
+entry_text = "A Raptor"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://chbcrkoc13jv7"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_b12iu"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_2krx0"]
+[ext_resource type="Resource" uid="uid://b44vilkvhpjdg" path="res://Resources/Debuffs/weakness.tres" id="2_8tgb3"]
+[ext_resource type="Resource" uid="uid://cmqp2ogu1rmwp" path="res://Resources/Debuffs/vulnerable.tres" id="3_230sp"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="4_hwv0q"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="5_qjqwn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw2pw"]
+atlas = ExtResource("5_qjqwn")
+region = Rect2(320, 2112, 32, 32)
+
+[resource]
+script = ExtResource("2_2krx0")
+buffs_to_apply = Array[ExtResource("1_b12iu")]([ExtResource("2_8tgb3"), ExtResource("3_230sp"), ExtResource("4_hwv0q")])
+heal = 40
+name = "False Blessing"
+type = 1
+icon = SubResource("AtlasTexture_hw2pw")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

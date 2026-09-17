@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://bgtjpmead56if"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_5nq40"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_23vod"]
+[ext_resource type="Resource" uid="uid://b8ukl1cue1hlx" path="res://Resources/Buffs/Resilience.tres" id="2_81lhn"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="3_1s3cc"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_b81bf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilfoi"]
+atlas = ExtResource("4_b81bf")
+region = Rect2(224, 2144, 32, 32)
+
+[resource]
+script = ExtResource("2_23vod")
+buffs_to_apply = Array[ExtResource("1_5nq40")]([ExtResource("2_81lhn"), ExtResource("3_1s3cc")])
+block = 15
+name = "Dive"
+type = 3
+cost = 0
+icon = SubResource("AtlasTexture_ilfoi")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

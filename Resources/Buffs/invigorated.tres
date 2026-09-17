@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://dfotssyhdegyu"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_cjojh"]
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_f8ts4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjojh"]
+atlas = ExtResource("1_cjojh")
+region = Rect2(0, 2144, 32, 32)
+
+[resource]
+script = ExtResource("1_f8ts4")
+multiplier = 1.405
+stat_to_modify = 1
+name = "Invigorated"
+icon = SubResource("AtlasTexture_cjojh")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

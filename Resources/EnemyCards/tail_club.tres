@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://4sdte78delw4"]
+
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_f1j3d"]
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_wjc56"]
+
+[resource]
+script = ExtResource("1_wjc56")
+damage = 25
+name = "Tail Club"
+cost = 0
+icon = ExtResource("1_f1j3d")
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MultiHitAttack" format=3 uid="uid://b1is7k308r50j"]
+
+[ext_resource type="Script" uid="uid://beb4seujy8aid" path="res://Scripts/multi_hit_attack.gd" id="1_pwf4s"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_qc6g1"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_domjf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc6g1"]
+atlas = ExtResource("1_qc6g1")
+region = Rect2(256, 2400, 32, 32)
+
+[resource]
+script = ExtResource("1_pwf4s")
+number_of_hits = 4
+damage = 12
+name = "Surging Strikes"
+cost = 4
+icon = SubResource("AtlasTexture_qc6g1")
+metadata/_custom_type_script = "uid://beb4seujy8aid"

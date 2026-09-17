@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://cq2hts4d4dhnl"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_at52h"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_14us6"]
+[ext_resource type="Resource" uid="uid://d03eqjdkwi4yb" path="res://Resources/Buffs/adaptability.tres" id="2_qprrn"]
+[ext_resource type="Resource" uid="uid://dhe70ajd7bd8x" path="res://Resources/Debuffs/bleeding.tres" id="3_6wi7o"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_asmvi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqaux"]
+atlas = ExtResource("4_asmvi")
+region = Rect2(224, 2464, 32, 32)
+
+[resource]
+script = ExtResource("2_14us6")
+buffs_to_apply = Array[ExtResource("1_at52h")]([ExtResource("2_qprrn"), ExtResource("3_6wi7o")])
+name = "Knives Out"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_pqaux")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

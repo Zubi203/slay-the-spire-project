@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AttackCardData" format=3 uid="uid://bbp74a37m7wy0"]
+
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_gkjbd"]
+[ext_resource type="Script" uid="uid://bbtv175u4k7a6" path="res://Scripts/attack_card.gd" id="1_hqf68"]
+
+[resource]
+script = ExtResource("1_hqf68")
+damage = 15
+name = "Head Bash"
+cost = 0
+icon = ExtResource("1_gkjbd")
+metadata/_custom_type_script = "uid://bbtv175u4k7a6"

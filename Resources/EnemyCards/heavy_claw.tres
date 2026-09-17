@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://d11y5jmw6ha50"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_k5ctx"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_24ag5"]
+[ext_resource type="Resource" uid="uid://dcibub4ibxrrr" path="res://Resources/Buffs/stalwart.tres" id="2_kopqh"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="3_wbhwi"]
+
+[resource]
+script = ExtResource("2_24ag5")
+buffs_to_apply = Array[ExtResource("1_k5ctx")]([ExtResource("2_kopqh")])
+damage = 21
+block = 5
+name = "Heavy Claw"
+cost = 0
+icon = ExtResource("3_wbhwi")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

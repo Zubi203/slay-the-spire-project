@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://s4d1t4qw6mub"]
+
+[ext_resource type="Script" uid="uid://bxrrrsusx0mme" path="res://Scripts/status_text_effect.gd" id="1_8bbwn"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="1_uajg1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8bbwn"]
+resource_local_to_scene = true
+font = ExtResource("1_uajg1")
+font_size = 10
+font_color = Color(1, 0.9565, 0.13, 1)
+outline_size = 6
+outline_color = Color(0.11706855, 0.10982547, 0, 1)
+
+[node name="StatusTextEffect" type="Label" unique_id=632746733]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Weakness"
+label_settings = SubResource("LabelSettings_8bbwn")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_8bbwn")
+buff_font_color = Color(1, 0.976, 0.29, 1)
+buff_border_color = Color(0.1528022, 0.1468837, 2.4065375e-08, 1)
+debuff_font_color = Color(0.851, 0.333, 0.094, 1)
+debuff_border_color = Color(0.22213545, 0.06126707, 0.0045536505, 1)

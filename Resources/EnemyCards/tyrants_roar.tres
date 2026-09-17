@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://d0b2y3st1x3ye"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_k7yum"]
+[ext_resource type="Resource" uid="uid://o87eqijfoigv" path="res://Resources/Buffs/anger_point.tres" id="2_k0cq1"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_x1lhd"]
+[ext_resource type="Resource" uid="uid://dhmufky11e4kr" path="res://Resources/Buffs/ferocity.tres" id="3_f2jly"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="4_f2jly"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_m1jxb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp8ou"]
+atlas = ExtResource("4_m1jxb")
+region = Rect2(224, 2144, 32, 32)
+
+[resource]
+script = ExtResource("2_x1lhd")
+buffs_to_apply = Array[ExtResource("1_k7yum")]([ExtResource("2_k0cq1"), ExtResource("3_f2jly"), ExtResource("4_f2jly")])
+heal = 8
+name = "Tyrant's Roar"
+type = 3
+cost = 0
+icon = SubResource("AtlasTexture_tp8ou")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

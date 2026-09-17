@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://duihx6yw6u3in"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_xfl5g"]
+[ext_resource type="Resource" uid="uid://dhe70ajd7bd8x" path="res://Resources/Debuffs/bleeding.tres" id="2_3dr25"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_q12mq"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="3_3dr25"]
+
+[resource]
+script = ExtResource("2_q12mq")
+debuffs_to_apply = Array[ExtResource("1_xfl5g")]([ExtResource("2_3dr25")])
+damage = 19
+name = "Serrated Teeth"
+cost = 0
+icon = ExtResource("3_3dr25")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

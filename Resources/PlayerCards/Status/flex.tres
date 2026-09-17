@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://b3l3boc5a6nvn"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_jxgv3"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_cb2jw"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="2_smrvd"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_scyh8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smrvd"]
+atlas = ExtResource("3_scyh8")
+region = Rect2(0, 1312, 32, 32)
+
+[resource]
+script = ExtResource("2_cb2jw")
+buffs_to_apply = Array[ExtResource("1_jxgv3")]([ExtResource("2_smrvd")])
+name = "Flex"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_smrvd")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

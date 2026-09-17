@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://rwvnaaj11uyl"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_cjkxo"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_2diul"]
+[ext_resource type="Resource" uid="uid://cv37p2jeibifj" path="res://Resources/Buffs/strength.tres" id="2_ug7ox"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="3_v6owr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug7ox"]
+atlas = ExtResource("3_v6owr")
+region = Rect2(288, 2432, 32, 32)
+
+[resource]
+script = ExtResource("2_2diul")
+buffs_to_apply = Array[ExtResource("1_cjkxo")]([ExtResource("2_ug7ox")])
+damage = 12
+name = "Fury"
+cost = 2
+icon = SubResource("AtlasTexture_ug7ox")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

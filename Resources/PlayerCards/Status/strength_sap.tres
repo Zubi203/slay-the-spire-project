@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://boipb1gxqqntc"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_gl68i"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="2_lbyr1"]
+[ext_resource type="Resource" uid="uid://dfotssyhdegyu" path="res://Resources/Buffs/invigorated.tres" id="2_ps4vx"]
+[ext_resource type="Resource" uid="uid://cr5b5fttpcymk" path="res://Resources/Debuffs/exposed.tres" id="3_it3tc"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="4_em28o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykvlb"]
+atlas = ExtResource("4_em28o")
+region = Rect2(194, 2208, 32, 32)
+
+[resource]
+script = ExtResource("2_lbyr1")
+debuffs_to_apply = Array[ExtResource("1_gl68i")]([ExtResource("3_it3tc")])
+buffs_to_apply = Array[ExtResource("1_gl68i")]([ExtResource("2_ps4vx")])
+heal = 8
+name = "Strength Sap"
+type = 1
+cost = 0
+icon = SubResource("AtlasTexture_ykvlb")
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

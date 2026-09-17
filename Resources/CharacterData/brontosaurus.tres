@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://ckmp3nv5q7c1j"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_ed3ha"]
+[ext_resource type="SpriteFrames" uid="uid://wwny2x7b11fc" path="res://Resources/SpriteFrames/brontosaurus.tres" id="1_ihaww"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_y55up"]
+[ext_resource type="Resource" uid="uid://btbye1wpwwiqr" path="res://Resources/EnemyCards/rest.tres" id="3_ihaww"]
+[ext_resource type="Resource" uid="uid://d0uytlhwuhovi" path="res://Resources/EnemyCards/neck_slam.tres" id="3_p2blb"]
+[ext_resource type="Resource" uid="uid://drnburbv5fl5g" path="res://Resources/EnemyCards/stomping_tantrum.tres" id="5_8xbym"]
+[ext_resource type="Resource" uid="uid://dota77g2ndrca" path="res://Resources/EnemyCards/gigantism.tres" id="6_vk2eb"]
+[ext_resource type="Resource" uid="uid://bi1fhi6hivgdw" path="res://Resources/EnemyCards/stomp.tres" id="7_20smy"]
+[ext_resource type="Resource" uid="uid://cp7xy6jwhgfhi" path="res://Resources/EnemyCards/hearty_recovery.tres" id="8_qm0eu"]
+[ext_resource type="AudioStream" uid="uid://c4wsccgsyk6gk" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoQuickLoudRoar.wav" id="9_8xbym"]
+
+[resource]
+script = ExtResource("2_y55up")
+name = "Brontosaurus"
+max_health = 190
+flip_sprite = true
+animation_sprites = ExtResource("1_ihaww")
+sprite_scale_multiplier = 1.2
+base_deck = Array[ExtResource("1_ed3ha")]([ExtResource("3_p2blb"), ExtResource("3_ihaww"), ExtResource("5_8xbym"), ExtResource("6_vk2eb"), ExtResource("3_p2blb"), ExtResource("7_20smy"), ExtResource("5_8xbym"), ExtResource("8_qm0eu"), ExtResource("3_p2blb"), ExtResource("5_8xbym"), ExtResource("6_vk2eb"), ExtResource("7_20smy")])
+death_sound = ExtResource("9_8xbym")
+display_entry_text = true
+entry_text = "A Large Sauropod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

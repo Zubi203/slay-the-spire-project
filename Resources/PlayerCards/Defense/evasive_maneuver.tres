@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BlockGainOnZeroCardData" format=3 uid="uid://dngquto2yi3gy"]
+
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_8p5tq"]
+[ext_resource type="Script" uid="uid://7l7ptrd52lc2" path="res://Scripts/block_gain_on_zero_block.gd" id="1_aaxmh"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_7fmhy"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_sb38l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p5tq"]
+atlas = ExtResource("1_8p5tq")
+region = Rect2(128, 2560, 32, 32)
+
+[resource]
+script = ExtResource("1_aaxmh")
+block_amount = 15
+name = "Evasive Maneuver"
+type = 1
+icon = SubResource("AtlasTexture_8p5tq")
+tooltip_statuses = Array[ExtResource("3_7fmhy")]([ExtResource("4_sb38l")])
+metadata/_custom_type_script = "uid://7l7ptrd52lc2"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MultiHitAttack" format=3 uid="uid://biuhmfwdtlkm2"]
+
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_80n1k"]
+[ext_resource type="Script" uid="uid://beb4seujy8aid" path="res://Scripts/multi_hit_attack.gd" id="1_pabxg"]
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="3_q4fbv"]
+
+[resource]
+script = ExtResource("1_pabxg")
+damage = 13
+name = "Double Chomp"
+cost = 0
+icon = ExtResource("1_80n1k")
+metadata/_custom_type_script = "uid://beb4seujy8aid"

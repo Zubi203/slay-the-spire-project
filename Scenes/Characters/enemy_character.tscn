@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://bnap263mbd4po"]
+
+[ext_resource type="PackedScene" uid="uid://johkywox4dhh" path="res://Scenes/Characters/character.tscn" id="1_nraa5"]
+[ext_resource type="AudioStream" uid="uid://df67fbs50l562" path="res://Audio/PrehistoricSoundPack/SFX_Files/11_human_damage_1.wav" id="3_agucv"]
+[ext_resource type="Shader" uid="uid://4il1vgmlngp6" path="res://Shaders/character.gdshader" id="3_f31sj"]
+[ext_resource type="SpriteFrames" uid="uid://cg6t7yfr244ch" path="res://Resources/SpriteFrames/yutyrannus.tres" id="3_sdh2x"]
+[ext_resource type="AudioStream" uid="uid://bluofi0nihtgu" path="res://Audio/PrehistoricSoundPack/SFX_Files/15_human_dash_2.wav" id="4_1s3j3"]
+[ext_resource type="AudioStream" uid="uid://dsqnrsgfur0m0" path="res://Audio/PrehistoricSoundPack/SFX_Files/SwordAttack.wav" id="4_wtdkf"]
+[ext_resource type="Script" uid="uid://dek7k5lmlx6u6" path="res://Scripts/enemy_ai.gd" id="5_mwus0"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="6_v16rk"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="7_p5gug"]
+[ext_resource type="PackedScene" uid="uid://bjff3lkqynf1n" path="res://Scenes/move_text_effect.tscn" id="8_1s3j3"]
+[ext_resource type="Script" uid="uid://bryps8r3shygm" path="res://Scripts/action_preview.gd" id="9_w4aa7"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="11_wtdkf"]
+
+[sub_resource type="Gradient" id="Gradient_wcbup"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.6792929)
+colors = PackedColorArray(1, 1, 1, 0.5882353, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w4aa7"]
+gradient = SubResource("Gradient_wcbup")
+width = 190
+height = 150
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w4aa7"]
+resource_local_to_scene = true
+shader = ExtResource("3_f31sj")
+shader_parameter/progress_red = 0.0
+shader_parameter/progress_green = 0.0
+shader_parameter/progress_blue = 0.0
+shader_parameter/progress_yellow = 0.0
+shader_parameter/progress_orange = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2w44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65ton"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xpw1u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhcui"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pi8ck"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+line_spacing = 0.0
+font = ExtResource("7_p5gug")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4aa7"]
+bg_color = Color(0.0765, 0.093641646, 0.17, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4860856, 0.5331459, 0.73317266, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.46666667)
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+anti_aliasing = false
+
+[node name="EnemyCharacter" unique_id=1085597718 instance=ExtResource("1_nraa5")]
+damage_sound = ExtResource("3_agucv")
+block_sound = ExtResource("4_wtdkf")
+attack_sound = ExtResource("4_1s3j3")
+
+[node name="GlowHighlight" parent="." index="0" unique_id=486116396]
+texture = SubResource("GradientTexture2D_w4aa7")
+
+[node name="CharacterAnimation" parent="." index="1" unique_id=1711762259]
+material = SubResource("ShaderMaterial_w4aa7")
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("3_sdh2x")
+offset = Vector2(0, -10)
+
+[node name="EnemyAI" type="Node" parent="." index="6" unique_id=1075435228 node_paths=PackedStringArray("preview_icon", "preview_label", "preview_button")]
+script = ExtResource("5_mwus0")
+preview_icon = NodePath("../EnemyUI/ActionPreview/PreviewIcon")
+preview_label = NodePath("../EnemyUI/ActionPreview/PreviewIcon/PreviewText")
+preview_button = NodePath("../EnemyUI/ActionPreview")
+move_text_animation = ExtResource("8_1s3j3")
+
+[node name="EnemyUI" type="Node2D" parent="." index="7" unique_id=2076336509]
+position = Vector2(-8, -94)
+
+[node name="ActionPreview" type="Button" parent="EnemyUI" index="0" unique_id=516982072 node_paths=PackedStringArray("intent_panel", "intent_label")]
+offset_left = -63.0
+offset_top = -10.0
+offset_right = 77.0
+offset_bottom = 90.0
+pivot_offset = Vector2(70, 50)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h2w44")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_65ton")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xpw1u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yhcui")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pi8ck")
+script = ExtResource("9_w4aa7")
+intent_panel = NodePath("PanelContainer")
+intent_label = NodePath("PanelContainer/MarginContainer/IntentLabel")
+
+[node name="PreviewIcon" type="TextureRect" parent="EnemyUI/ActionPreview" index="0" unique_id=415140783]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_right = -58.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_v16rk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PreviewText" type="Label" parent="EnemyUI/ActionPreview/PreviewIcon" index="0" unique_id=434699366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+label_settings = SubResource("LabelSettings_h2w44")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="EnemyUI/ActionPreview" index="1" unique_id=328367837]
+visible = false
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 0
+offset_left = -36.0
+offset_top = 31.0
+offset_right = 38.0
+offset_bottom = 87.0
+pivot_offset = Vector2(74, 34)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w4aa7")
+
+[node name="MarginContainer" type="MarginContainer" parent="EnemyUI/ActionPreview/PanelContainer" index="0" unique_id=1406118780]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="IntentLabel" type="RichTextLabel" parent="EnemyUI/ActionPreview/PanelContainer/MarginContainer" index="0" unique_id=2069649697]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("7_p5gug")
+theme_override_fonts/bold_font = ExtResource("11_wtdkf")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 6
+theme_override_font_sizes/italics_font_size = 6
+theme_override_font_sizes/mono_font_size = 6
+bbcode_enabled = true
+text = "[b]Intent:[/b]
+deal 5 damage
+heal 7 hp
+apply exposed
+heal 7 hp
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusPromptContainer" parent="." index="14" unique_id=373093975]
+mouse_filter = 2

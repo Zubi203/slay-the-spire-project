@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusCard" format=3 uid="uid://476fv1qmtdog"]
+
+[ext_resource type="Script" uid="uid://d2uacmhmkp81t" path="res://Scripts/status_effect.gd" id="1_aveqw"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="2_qsjjo"]
+[ext_resource type="Script" uid="uid://dn6rpwgaeut7g" path="res://Scripts/debuff_card.gd" id="3_g77x7"]
+[ext_resource type="Resource" uid="uid://c72eclfturddj" path="res://Resources/Buffs/block.tres" id="4_qsjjo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ykj"]
+atlas = ExtResource("2_qsjjo")
+region = Rect2(320, 1696, 32, 32)
+
+[resource]
+script = ExtResource("3_g77x7")
+block = 25
+name = "Heavy Shield"
+type = 1
+cost = 2
+icon = SubResource("AtlasTexture_n3ykj")
+tooltip_statuses = Array[ExtResource("1_aveqw")]([ExtResource("4_qsjjo")])
+metadata/_custom_type_script = "uid://dn6rpwgaeut7g"

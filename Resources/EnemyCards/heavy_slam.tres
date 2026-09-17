@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DamageFromBlockCardData" format=3 uid="uid://qodsyuoy34x1"]
+
+[ext_resource type="Script" uid="uid://cu83o4sm5e202" path="res://Scripts/damage_from_block_card.gd" id="1_0bnbm"]
+[ext_resource type="Texture2D" uid="uid://ufe8537kmbx6" path="res://Graphics/Card/icon_attack.png" id="1_3rxl6"]
+
+[resource]
+script = ExtResource("1_0bnbm")
+name = "Heavy Slam"
+cost = 0
+icon = ExtResource("1_3rxl6")
+metadata/_custom_type_script = "uid://cu83o4sm5e202"

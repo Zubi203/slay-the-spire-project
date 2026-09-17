@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dbao7tds2e27e"]
+
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="1_3i2vv"]
+[ext_resource type="SpriteFrames" uid="uid://bnbhpklknasvv" path="res://Resources/SpriteFrames/argentinosaurus.tres" id="1_tyqjh"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="2_wpkna"]
+[ext_resource type="Resource" uid="uid://bi1fhi6hivgdw" path="res://Resources/EnemyCards/stomp.tres" id="3_kvd3q"]
+[ext_resource type="Resource" uid="uid://bxcga1btn4ntd" path="res://Resources/EnemyCards/titanic_body_2.tres" id="4_kvd3q"]
+[ext_resource type="Resource" uid="uid://btbye1wpwwiqr" path="res://Resources/EnemyCards/rest.tres" id="4_me6tf"]
+[ext_resource type="Resource" uid="uid://qodsyuoy34x1" path="res://Resources/EnemyCards/heavy_slam.tres" id="5_3iimf"]
+[ext_resource type="Resource" uid="uid://d0uytlhwuhovi" path="res://Resources/EnemyCards/neck_slam.tres" id="6_koocc"]
+[ext_resource type="Resource" uid="uid://cvwhbq7wm1ni1" path="res://Resources/EnemyCards/crunch.tres" id="7_d7hm8"]
+[ext_resource type="Resource" uid="uid://c5tkbl5j8dehn" path="res://Resources/EnemyCards/tail_swipe.tres" id="9_mcg72"]
+[ext_resource type="AudioStream" uid="uid://c4wsccgsyk6gk" path="res://Audio/PrehistoricSoundPack/SFX_Files/DinoQuickLoudRoar.wav" id="10_lhhs8"]
+
+[resource]
+script = ExtResource("2_wpkna")
+name = "Argentinosaurus"
+max_health = 220
+flip_sprite = true
+animation_sprites = ExtResource("1_tyqjh")
+sprite_scale_multiplier = 1.4
+base_deck = Array[ExtResource("1_3i2vv")]([ExtResource("3_kvd3q"), ExtResource("4_kvd3q"), ExtResource("5_3iimf"), ExtResource("6_koocc"), ExtResource("7_d7hm8"), ExtResource("4_me6tf"), ExtResource("3_kvd3q"), ExtResource("9_mcg72"), ExtResource("4_kvd3q"), ExtResource("5_3iimf"), ExtResource("3_kvd3q"), ExtResource("9_mcg72")])
+death_sound = ExtResource("10_lhhs8")
+display_entry_text = true
+entry_text = "A Large Sauropod"
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

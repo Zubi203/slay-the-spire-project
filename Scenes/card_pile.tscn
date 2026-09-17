@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bu1vawl1hdfgg"]
+
+[ext_resource type="Script" uid="uid://ddc2pfqndr5rp" path="res://Scripts/card_pile_icon.gd" id="1_k2w72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkf5k"]
+bg_color = Color(0.6, 0.198, 0.198, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[node name="CardPile" type="Control" unique_id=195156092 node_paths=PackedStringArray("card_panels")]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_k2w72")
+type = 1
+card_panels = [NodePath("BackCard"), NodePath("MiddleCard"), NodePath("FrontCard")]
+style_box = SubResource("StyleBoxFlat_lkf5k")
+
+[node name="BackCard" type="Panel" parent="." unique_id=1868195022]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -79.0
+offset_right = 129.54272
+offset_bottom = 66.58026
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.5196602
+scale = Vector2(0.8502303, 0.8511038)
+mouse_filter = 2
+
+[node name="MiddleCard" type="Panel" parent="." unique_id=584696987]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -92.0
+offset_right = 105.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.24601603
+scale = Vector2(0.8502303, 0.8511038)
+mouse_filter = 2
+
+[node name="FrontCard" type="Panel" parent="." unique_id=975641634]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -82.0
+offset_right = 70.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8502303, 0.8511038)
+mouse_filter = 2

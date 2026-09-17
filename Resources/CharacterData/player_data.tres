@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://i4wavgmm17ix"]
+
+[ext_resource type="SpriteFrames" uid="uid://bmdhqg81unhwb" path="res://Resources/SpriteFrames/player.tres" id="1_73t8g"]
+[ext_resource type="Script" uid="uid://b5dqmtmmos5c6" path="res://Scripts/character_data.gd" id="1_xcli7"]
+[ext_resource type="Script" uid="uid://5fskpck051j0" path="res://Scripts/card_data.gd" id="2_53gq2"]
+
+[resource]
+script = ExtResource("1_xcli7")
+name = "Player"
+max_health = 80
+is_player = true
+animation_sprites = ExtResource("1_73t8g")
+metadata/_custom_type_script = "uid://b5dqmtmmos5c6"

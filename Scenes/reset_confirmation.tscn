@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://brnwayjaaqm70"]
+
+[ext_resource type="Theme" uid="uid://caslg0lhfp0h4" path="res://Resources/ui_theme.tres" id="1_nfpap"]
+[ext_resource type="Script" uid="uid://df8k2ykjb4ukr" path="res://Scripts/fade_in_color_rect.gd" id="1_uttcx"]
+[ext_resource type="Script" uid="uid://dleqw8n85rmv7" path="res://Scripts/reset_confirmation.gd" id="2_7w15c"]
+[ext_resource type="FontFile" uid="uid://clmp6c1b70mkj" path="res://Graphics/UI/Font/PTSerif-Bold.ttf" id="3_ks3us"]
+[ext_resource type="FontFile" uid="uid://dlku8vdfc7pyf" path="res://Graphics/UI/Font/PTSerif-Regular.ttf" id="4_4bsp3"]
+[ext_resource type="Script" uid="uid://sshbisoigeyr" path="res://Scripts/animated_button_component.gd" id="5_4bsp3"]
+[ext_resource type="Script" uid="uid://dimct1fhrm5my" path="res://Scripts/container_animation.gd" id="6_cinfj"]
+[ext_resource type="Script" uid="uid://b0ig5g6bl6xug" path="res://Scripts/button_audio_component.gd" id="7_ulqpw"]
+[ext_resource type="Script" uid="uid://bw7u2deyx1w4l" path="res://Scripts/auto_animate_ui_component.gd" id="9_qsuet"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2w44"]
+font = ExtResource("3_ks3us")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.5058824)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_65ton"]
+font = ExtResource("4_4bsp3")
+font_size = 26
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.54509807)
+shadow_offset = Vector2(2, 2)
+
+[node name="ResetConfirmation" type="Control" unique_id=91307828 node_paths=PackedStringArray("buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_nfpap")
+script = ExtResource("2_7w15c")
+buttons = [NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ResetButton"), NodePath("CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton")]
+
+[node name="FadeInColorRect" type="ColorRect" parent="." unique_id=863147690]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_uttcx")
+fade_in_duration = 0.2
+metadata/_custom_type_script = "uid://df8k2ykjb4ukr"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=424832955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=710305232]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1086882394]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=2048530822]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel" unique_id=1343169855]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer" unique_id=978646930]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=409171466]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/CenterContainer" unique_id=970907620]
+layout_mode = 2
+text = "RESET RUN?"
+label_settings = SubResource("LabelSettings_h2w44")
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=311783535]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/CenterContainer2" unique_id=1546784459]
+layout_mode = 2
+text = "Current progress will be lost"
+label_settings = SubResource("LabelSettings_65ton")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1454753390]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+script = ExtResource("6_cinfj")
+anim_when = 1
+delay_appear = 0.1
+
+[node name="ResetButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=875535257]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RedButton"
+text = "RESET"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ResetButton" unique_id=197878785]
+script = ExtResource("5_4bsp3")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ResetButton" unique_id=1575122374]
+script = ExtResource("7_ulqpw")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=557795815]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CANCEL"
+
+[node name="AnimatedButtonComponent" type="Node2D" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" unique_id=992937908]
+script = ExtResource("5_4bsp3")
+metadata/_custom_type_script = "uid://sshbisoigeyr"
+
+[node name="ButtonAudioComponent" type="AudioStreamPlayer" parent="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" unique_id=1489635332]
+script = ExtResource("7_ulqpw")
+metadata/_custom_type_script = "uid://b0ig5g6bl6xug"
+
+[node name="AutoAnimateUIComponent" type="Control" parent="." unique_id=1045665388]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_qsuet")
+anim_when = 1
+metadata/_custom_type_script = "uid://bw7u2deyx1w4l"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

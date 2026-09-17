@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MultiplicativeModifierStatus" format=3 uid="uid://bljqtemp4rt02"]
+
+[ext_resource type="Script" uid="uid://tdev7j85xi82" path="res://Scripts/multiplicative_modifier_status.gd" id="1_pc17e"]
+[ext_resource type="Texture2D" uid="uid://cs7cy5p4rbhgg" path="res://Graphics/Free - Raven Fantasy Icons/Free - Raven Fantasy Icons/Full Spritesheet/32x32.png" id="1_v1wo3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1wo3"]
+atlas = ExtResource("1_v1wo3")
+region = Rect2(128, 1728, 32, 32)
+
+[resource]
+script = ExtResource("1_pc17e")
+multiplier = 0.75
+stat_to_modify = 2
+buff_type = 1
+name = "Maimed"
+icon = SubResource("AtlasTexture_v1wo3")
+metadata/_custom_type_script = "uid://tdev7j85xi82"

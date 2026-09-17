@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cuwwtrek0igqh"]
+
+[ext_resource type="PackedScene" uid="uid://os5fhlwjbmqn" path="res://Scenes/checkpoint_button.tscn" id="1_tl814"]
+[ext_resource type="Script" uid="uid://d2jq6c1bufa1n" path="res://Scripts/reward_chest.gd" id="2_dn2b8"]
+[ext_resource type="Texture2D" uid="uid://8i78k5u2ok1v" path="res://Graphics/57.png" id="2_scu60"]
+[ext_resource type="Texture2D" uid="uid://croyld4oiduaw" path="res://Graphics/58.png" id="3_dn2b8"]
+[ext_resource type="AudioStream" uid="uid://dwhvlv78vxm51" path="res://Audio/PrehistoricSoundPack/SFX_Files/wooden-chest-opening-gfx-sounds-wooden-blind-frame-close-1-0m00s.mp3" id="4_klhvc"]
+[ext_resource type="AudioStream" uid="uid://ccc4xtt1kbk8d" path="res://Audio/PrehistoricSoundPack/SFX_Files/sparkle.mp3" id="5_xg2ou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dn2b8"]
+radius = 34.058773
+
+[sub_resource type="Gradient" id="Gradient_dn2b8"]
+offsets = PackedFloat32Array(0, 0.82575756)
+colors = PackedColorArray(1, 0.9673333, 0.72, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_65ton"]
+gradient = SubResource("Gradient_dn2b8")
+width = 16
+height = 16
+fill = 2
+fill_from = Vector2(0.50179857, 0.49820143)
+
+[sub_resource type="Curve" id="Curve_klhvc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.6571436, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xpw1u"]
+curve = SubResource("Curve_klhvc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h2w44"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -22.56, 0)
+emission_shape = 3
+emission_box_extents = Vector3(-30.19, 26.225, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+gravity = Vector3(0, -10, 0)
+scale_min = 0.099999994
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_xpw1u")
+
+[sub_resource type="Gradient" id="Gradient_klhvc"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xpw1u"]
+gradient = SubResource("Gradient_klhvc")
+width = 16
+height = 16
+fill = 2
+fill_from = Vector2(0.51258993, 0.5233813)
+
+[sub_resource type="Curve" id="Curve_xg2ou"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.87500006, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_yhcui"]
+curve = SubResource("Curve_xg2ou")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_65ton"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -17.05, 0)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 140.0
+gravity = Vector3(0, 0, 0)
+damping_min = 40.0
+damping_max = 40.0
+scale_min = 0.099999994
+scale_max = 0.39999998
+scale_curve = SubResource("CurveTexture_yhcui")
+
+[node name="RewardChest" unique_id=1896656838 node_paths=PackedStringArray("open_particles") instance=ExtResource("1_tl814")]
+script = ExtResource("2_dn2b8")
+open_sprite = ExtResource("3_dn2b8")
+open_particles = NodePath("OpenParticles")
+chest_open_sound = ExtResource("4_klhvc")
+chest_sparkle_sound = ExtResource("5_xg2ou")
+
+[node name="Sprite2D" parent="." index="0" unique_id=2071041185]
+texture = ExtResource("2_scu60")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=947165182]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_dn2b8")
+
+[node name="SparkleParticles" type="GPUParticles2D" parent="." index="2" unique_id=1085485295]
+amount = 10
+texture = SubResource("GradientTexture2D_65ton")
+process_material = SubResource("ParticleProcessMaterial_h2w44")
+
+[node name="OpenParticles" type="GPUParticles2D" parent="." index="3" unique_id=381703984]
+emitting = false
+amount = 30
+texture = SubResource("GradientTexture2D_xpw1u")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.56
+process_material = SubResource("ParticleProcessMaterial_65ton")
